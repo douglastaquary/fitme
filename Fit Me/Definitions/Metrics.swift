@@ -13,11 +13,20 @@ public struct Metrics {
     public static let grid: CGFloat = 8
     public static let padding: CGFloat = 8
     
+    public static let paddingTopImageView: CGFloat = 96 //(padding * 12)
+    public static let paddingTopTitleToImage: CGFloat = 32
+    
     public static let welcomeTitleFontSize: CGFloat = 28
     public static let welcomeTitleFontWeight: UIFont.Weight = .semibold
     
     public static let welcomeDescriptionFontSize: CGFloat = 16
     public static let welcomeDescriptionFontWeight: UIFont.Weight = .medium
+    
+    public static let iconWelcomeSizeWeight: CGFloat = 100
+    public static let iconWelcomeSizeHeight: CGFloat = 100
+    
+    public static let addTrainingSectionTitleFontSize: CGFloat = 16
+    public static let addTrainingSectionTitleFontWeight: UIFont.Weight = .regular
 
     //changed of 28 to 34
     public static let largeTitleFontSize: CGFloat = 34
@@ -31,12 +40,20 @@ public struct Metrics {
     
     public static let fitmeWelcomeIconWidth: CGFloat = 100
     public static let fitmeWelcomeIconHeight: CGFloat = 100
-    public let title1 = UIFont.systemFont(ofSize: 42, weight: .heavy)
-    public let title2 = UIFont.systemFont(ofSize: 28, weight: .semibold)
-    public let title3 = UIFont.systemFont(ofSize: 22, weight: .bold)
     
     public static let buttonTitleFontSize: CGFloat = 16
     public static let buttonTitleFontWeight: UIFont.Weight = .semibold
     
+    public static let buttonHeight: CGFloat = 44
+    
     public static let userImageTrallingPadding: CGFloat = 24
+    
+    public static let arrowImageHeight: CGFloat = 24
+    public static let checkImageHeight: CGFloat = 24
+    
+    public static let categoryTitleFontSize: CGFloat = 24
+    public static let categoryDescriptionFontWeight: UIFont.Weight = .medium
+    
+    public static let tagCircleColorSize: CGFloat = 28
+    public static let dayCircleColorSize: CGFloat = 28
 }

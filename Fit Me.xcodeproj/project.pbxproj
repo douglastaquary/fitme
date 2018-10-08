@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0F19D021690806008EBD45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */; };
+		4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */; };
+		4E0F19D7216A7CE2008EBD45 /* TagColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */; };
+		4E0F19D9216A7DD1008EBD45 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */; };
+		4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */; };
+		4E0F19DD216AEFD3008EBD45 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */; };
+		4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DF216AF36B008EBD45 /* DayView.swift */; };
+		4E0F19E2216AF3AA008EBD45 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */; };
+		4E0F19E4216AF446008EBD45 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E3216AF446008EBD45 /* CategoryView.swift */; };
+		4E0F19E6216AF454008EBD45 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E5216AF454008EBD45 /* ExerciseView.swift */; };
+		4E0F19E8216AF471008EBD45 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E7216AF471008EBD45 /* ExerciseTableViewCell.swift */; };
+		4E0F19EA216AF48F008EBD45 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E9216AF48F008EBD45 /* CategoryTableViewCell.swift */; };
 		4E435AAC21645169005F4888 /* FitmeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E435AAA21645169005F4888 /* FitmeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E435AAF21645169005F4888 /* FitmeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E435AA821645169005F4888 /* FitmeKit.framework */; };
 		4E435AB021645169005F4888 /* FitmeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E435AA821645169005F4888 /* FitmeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,6 +70,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagColorView.swift; sourceTree = "<group>"; };
+		4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagColorTableViewCell.swift; sourceTree = "<group>"; };
+		4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		4E0F19DF216AF36B008EBD45 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
+		4E0F19E3216AF446008EBD45 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		4E0F19E5216AF454008EBD45 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		4E0F19E7216AF471008EBD45 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		4E0F19E9216AF48F008EBD45 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4E435AA821645169005F4888 /* FitmeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FitmeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E435AAA21645169005F4888 /* FitmeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitmeKit.h; sourceTree = "<group>"; };
 		4E435AAB21645169005F4888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +129,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0F19CE216907F0008EBD45 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19D5216A7BAB008EBD45 /* Add */,
+				4E0F19D4216A7A91008EBD45 /* Training */,
+				4E0F19D1216911FD008EBD45 /* Welcome */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4E0F19D1216911FD008EBD45 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */,
+				4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		4E0F19D4216A7A91008EBD45 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		4E0F19D5216A7BAB008EBD45 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19DE216AF0BC008EBD45 /* Cells */,
+				4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */,
+				4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		4E0F19DE216AF0BC008EBD45 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */,
+				4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */,
+				4E0F19DF216AF36B008EBD45 /* DayView.swift */,
+				4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */,
+				4E0F19E3216AF446008EBD45 /* CategoryView.swift */,
+				4E0F19E9216AF48F008EBD45 /* CategoryTableViewCell.swift */,
+				4E0F19E5216AF454008EBD45 /* ExerciseView.swift */,
+				4E0F19E7216AF471008EBD45 /* ExerciseTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		4E435AA921645169005F4888 /* FitmeKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +234,7 @@
 		4EA9C92C2161A5D600B2ADEB /* Fit Me */ = {
 			isa = PBXGroup;
 			children = (
+				4E0F19CE216907F0008EBD45 /* Screens */,
 				4EECF34921684F4700113DD5 /* Suporting Files */,
 				4E435AB821645D62005F4888 /* Models */,
 				4E435AB5216451C8005F4888 /* Store */,
@@ -166,6 +242,7 @@
 				4EECF342216847EB00113DD5 /* Extensions */,
 				4EECF33E216846B500113DD5 /* Views */,
 				4EA9C92D2161A5D600B2ADEB /* AppDelegate.swift */,
+				4EA9C93C2161A5D800B2ADEB /* Info.plist */,
 			);
 			path = "Fit Me";
 			sourceTree = "<group>";
@@ -201,7 +278,6 @@
 		4EECF34921684F4700113DD5 /* Suporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EA9C93C2161A5D800B2ADEB /* Info.plist */,
 				4EA9C9312161A5D600B2ADEB /* Main.storyboard */,
 				4EA9C9372161A5D700B2ADEB /* Assets.xcassets */,
 				4EA9C9392161A5D800B2ADEB /* LaunchScreen.storyboard */,
@@ -339,15 +415,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0F19E6216AF454008EBD45 /* ExerciseView.swift in Sources */,
+				4E0F19E8216AF471008EBD45 /* ExerciseTableViewCell.swift in Sources */,
 				4EA9C9362161A5D600B2ADEB /* Fit_Me.xcdatamodeld in Sources */,
+				4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */,
+				4E0F19D021690806008EBD45 /* WelcomeViewController.swift in Sources */,
 				4EECF3452168496000113DD5 /* Metrics.swift in Sources */,
 				4EECF340216846C700113DD5 /* FitmeButton.swift in Sources */,
 				4EECF3462168496700113DD5 /* Colors.swift in Sources */,
+				4E0F19E4216AF446008EBD45 /* CategoryView.swift in Sources */,
+				4E0F19E2216AF3AA008EBD45 /* DayTableViewCell.swift in Sources */,
+				4E0F19D7216A7CE2008EBD45 /* TagColorView.swift in Sources */,
+				4E0F19EA216AF48F008EBD45 /* CategoryTableViewCell.swift in Sources */,
 				4EECF34B2168503800113DD5 /* AttributedString+FontColor.swift in Sources */,
+				4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */,
 				4EECF3482168496C00113DD5 /* Bundle+Fitme.swift in Sources */,
+				4E0F19D9216A7DD1008EBD45 /* AddViewModel.swift in Sources */,
+				4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */,
 				4EECF344216847FD00113DD5 /* UIImage+withColor.swift in Sources */,
 				4EA9C92E2161A5D600B2ADEB /* AppDelegate.swift in Sources */,
 				4EECF3472168496A00113DD5 /* Constants.swift in Sources */,
+				4E0F19DD216AEFD3008EBD45 /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

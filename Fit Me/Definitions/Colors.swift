@@ -24,6 +24,7 @@ private protocol ColorStore {
     static var exerciseDescriptionText: UIColor { get }
     static var actionColor: UIColor { get }
     static var success: UIColor { get }
+    static var defaultTag: UIColor { get }
 }
 
 private struct LightTheme: ColorStore {
@@ -34,6 +35,7 @@ private struct LightTheme: ColorStore {
     static let exerciseDescriptionText: UIColor = #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)
     static let actionColor: UIColor =  #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)
     static let success: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
+     static var defaultTag: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
 }
 
 extension UIColor: ColorStore {
@@ -70,6 +72,10 @@ extension UIColor: ColorStore {
     
     public static var success: UIColor {
         return colorStore.success
+    }
+    
+    public static var defaultTag: UIColor {
+        return colorStore.defaultTag
     }
     
 }
