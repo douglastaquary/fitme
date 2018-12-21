@@ -28,22 +28,37 @@ public struct WelcomeViewModel {
         return UIImage(named: "ic_app")
     }
     
-//    private static let messageParagraphStyle: NSMutableParagraphStyle = {
-//        let style = NSMutableParagraphStyle()
-//
-//        style.lineSpacing = Metrics.successDescriptionLineHeight
-//        style.alignment = .center
-//
-//        return style
-//    }()
-//
-//    private static let desriptionAttributes: [NSAttributedString.Key: Any] = {
-//        return [
-//            .foregroundColor: UIColor.secondaryText,
-//            .font: UIFont.systemFont(ofSize: Metrics.successDescriptionFontSize, weight: Metrics.successDescriptionFontWeight),
-//            .paragraphStyle: messageParagraphStyle
-//        ]
-//    }()
+    public var attributedDescription: NSAttributedString {
+        return NSAttributedString(string: description, attributes: WelcomeViewModel.descriptionAttributes)
+    }
+    
+    public var attributedButtonTitle: NSAttributedString {
+        return NSAttributedString(string: buttonTitle, attributes: WelcomeViewModel.buttonTitleAttributes)
+    }
+    
+    private static let messageParagraphStyle: NSMutableParagraphStyle = {
+        let style = NSMutableParagraphStyle()
+
+        style.lineSpacing = Metrics.welcomeDescriptionLineHeight
+        style.alignment = .center
+
+        return style
+    }()
+
+    private static let descriptionAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.secondaryText,
+            .font: UIFont.systemFont(ofSize: Metrics.welcomeDescriptionFontSize, weight: Metrics.welcomeDescriptionFontWeight)
+        ]
+    }()
+    
+    private static let buttonTitleAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.background,
+            .font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize, weight: Metrics.buttonTitleFontWeight),
+            .paragraphStyle: messageParagraphStyle
+        ]
+    }()
 //
 //    private static let messageNotificationInfoAttributes: [NSAttributedString.Key: Any] = {
 //        return [

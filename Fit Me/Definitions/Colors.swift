@@ -30,7 +30,7 @@ private protocol ColorStore {
 private struct LightTheme: ColorStore {
     static let background: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let primaryText: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    static let secondaryText: UIColor = #colorLiteral(red: 0.2666666667, green: 0.2666666667, blue: 0.2666666667, alpha: 1)
+    static let secondaryText: UIColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     static let exerciseTitleText: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
     static let exerciseDescriptionText: UIColor = #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)
     static let actionColor: UIColor =  #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)

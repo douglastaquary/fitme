@@ -9,10 +9,10 @@
 import UIKit
 
 protocol WelcomeViewControllerDelegate: class {
-    func welcomeViewController(_ controller: WelcomeViewController)
+    func welcomeViewController(_ controller: TrainingListViewController)
 }
 
-final class WelcomeViewController: UIViewController {
+final class TrainingListViewController: UIViewController {
     
     weak var delegate: WelcomeViewControllerDelegate?
     
@@ -31,6 +31,7 @@ final class WelcomeViewController: UIViewController {
        let v = UIImageView()
         
         v.heightAnchor.constraint(equalToConstant: Metrics.iconWelcomeSizeHeight).isActive = true
+        v.widthAnchor.constraint(equalToConstant: Metrics.iconWelcomeSizeHeight).isActive = true
         v.translatesAutoresizingMaskIntoConstraints = false
         
         return v
@@ -40,8 +41,8 @@ final class WelcomeViewController: UIViewController {
        let l = UILabel()
         
         l.font = UIFont.systemFont(ofSize: Metrics.largeTitleFontSize, weight: Metrics.buttonTitleFontWeight)
-        l.numberOfLines = 1
-        l.lineBreakMode = .byTruncatingTail
+        l.numberOfLines = 0
+        l.lineBreakMode = .byWordWrapping
         
         return l
     }()
@@ -52,6 +53,7 @@ final class WelcomeViewController: UIViewController {
         l.font = UIFont.systemFont(ofSize: Metrics.welcomeDescriptionFontSize, weight: Metrics.welcomeDescriptionFontWeight)
         l.numberOfLines = 0
         l.lineBreakMode = .byWordWrapping
+        l.textAlignment = .center
         l.translatesAutoresizingMaskIntoConstraints = false
         
         return l
@@ -75,42 +77,58 @@ final class WelcomeViewController: UIViewController {
     private lazy var welcomeButton: FitmeButton = {
        let b = FitmeButton()
         
-        b.addTarget(self, action: #selector(goTrainingList), for: .touchUpInside)
+        b.addTarget(self, action: #selector(addNewTraining), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
         b.heightAnchor.constraint(equalToConstant: Metrics.buttonHeight).isActive = true
         
         return b
     }()
     
-    @objc private func goTrainingList() {
+    private func installCustomBackButton() {
+        let backItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+        
+        backItem.tintColor = .primaryText
+        navigationItem.backBarButtonItem = backItem
+    }
+    
+    @objc private func addNewTraining() {
         delegate?.welcomeViewController(self)
     }
+    
     
     override func viewDidLoad() {
         view.backgroundColor = .background
         
         view.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: Metrics.paddingTopImageView).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: Metrics.paddingTopImageView*2).isActive = true
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(contentStack)
-        contentStack.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -Metrics.paddingTopTitleToImage).isActive = true
+        contentStack.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.paddingTopTitleToImage*2).isActive = true
         contentStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.padding).isActive = true
-        contentStack.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: Metrics.padding).isActive = true
+        contentStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.padding).isActive = true
+        contentStack.bottomAnchor.constraint(equalTo: welcomeButton.topAnchor, constant: -Metrics.padding)
         
         view.addSubview(welcomeButton)
-        welcomeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.padding).isActive = true
-        welcomeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.padding).isActive = true
-        welcomeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Metrics.padding).isActive = true
+        welcomeButton.heightAnchor.constraint(equalToConstant: Metrics.padding*8)
+        welcomeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.padding*3).isActive = true
+        welcomeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.padding*3).isActive = true
+        welcomeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Metrics.padding*4).isActive = true
         
         updateUI()
+        installCustomBackButton()
 
     }
     
     private func updateUI() {
         imageView.image = viewModel.image
         titleLabel.text = viewModel.title
-        descriptionLabel.text = viewModel.description
-        welcomeButton.setTitle(viewModel.buttonTitle, for: .normal)
+        descriptionLabel.attributedText = viewModel.attributedDescription
+        welcomeButton.setAttributedTitle(viewModel.attributedButtonTitle, for: .normal)
     }
 }

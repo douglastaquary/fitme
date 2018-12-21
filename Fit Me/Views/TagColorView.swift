@@ -18,15 +18,28 @@ public enum CellState {
 public class TagColorView: UIView {
     
     public var didTapTag: (() -> Void)?
-
     
-    public var viewModel: AddViewModel? {
+    private var circleBackground: UIColor?
+    
+    public var viewModel: TagViewModel? {
         didSet {
             buildUI()
         }
     }
     
-
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        buildUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        buildUI()
+    }
+    
     var viewState: CellState = .unselected {
         didSet {
             if viewState == .unselected {
@@ -37,28 +50,44 @@ public class TagColorView: UIView {
         }
     }
     
-    private lazy var circleView: UIView = {
+    public lazy var circleView: UIView = {
         let v = UIView()
         
         v.translatesAutoresizingMaskIntoConstraints =  false
         v.layer.cornerRadius = bounds.size.height/2
         v.heightAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+        v.widthAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+        v.backgroundColor = .blue
         v.layer.masksToBounds = true
         
         return v
     }()
     
-
+    
     private func buildUI() {
-        let contentView = self
+       // let contentView = self
         
-        self.backgroundColor = .background
-        
+//        let stackView = UIStackView()
+//        stackView.spacing = Metrics.grid
+//
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        contentView.addSubview(stackView)
+////
+////        contentView.heightAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+////        contentView.widthAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+////
+//        stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+//        stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+//        stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+//        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+//
+//
+//        stackView.addArrangedSubview(circleView)
+//
         addSubview(circleView)
-        
-        circleView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        circleView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
 
+        circleView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        circleView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
 
@@ -92,27 +121,13 @@ public class TagColorView: UIView {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        expand()
+        expand { print("didTap") }
     }
     
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         
-        expand()
-    }
-    
-    private func compress() {
-        UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DMakeScale(0.96, 0.96, 1)
-        }, completion: nil)
-    }
-    
-    private func expand() {
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DIdentity
-        }, completion: { _ in
-            self.selectedTag()
-        })
+        expand { self.selectedTag() }
     }
     
     private func selectedTag() {
@@ -125,18 +140,8 @@ public class TagColorView: UIView {
     private func unselectedTag() {
         UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
             self.layer.transform = CATransform3DIdentity
+            self.circleView.backgroundColor = .background
         }, completion: nil)
     }
-    
-    private func switchDaySelected() {
-        if circleView.isHidden {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.circleView.alpha = 1
-            })
-        } else {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.circleView.alpha = 0
-            })
-        }
-    }
 }
+

@@ -10,9 +10,9 @@ import UIKit
 
 final class CategoryTableViewCell: UITableViewCell {
     
-    private lazy var categoryView = CategoryView(frame: .zero)
+    public lazy var categoryView = CategoryView(frame: .zero)
     
-    public var viewModel: AddViewModel? {
+    public var viewModel: TrainingViewModel? {
         get {
             return categoryView.viewModel
         }
@@ -46,7 +46,7 @@ final class CategoryTableViewCell: UITableViewCell {
         categoryView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(categoryView)
         
-        categoryView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Metrics.padding).isActive = true
+        categoryView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Metrics.padding*3).isActive = true
         categoryView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding).isActive = true
         categoryView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Metrics.padding).isActive = true
         categoryView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Metrics.padding).isActive = true

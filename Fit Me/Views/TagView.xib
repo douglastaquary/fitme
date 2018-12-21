@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagView" customModule="Fit_Me" customModuleProvider="target">
+            <connections>
+                <outlet property="tag1" destination="HxM-Gg-cOf" id="GtQ-AN-gDN"/>
+                <outlet property="tag10" destination="xP5-ZF-2YC" id="1r2-4L-SeO"/>
+                <outlet property="tag2" destination="qJm-HU-jN1" id="Lzq-Gh-qTS"/>
+                <outlet property="tag3" destination="jdU-GW-iuU" id="vRQ-sK-kl6"/>
+                <outlet property="tag4" destination="5k1-7w-9I6" id="E6K-DM-hcu"/>
+                <outlet property="tag5" destination="fWn-DU-Zh1" id="y7C-ZC-GAl"/>
+                <outlet property="tag6" destination="dWY-n7-Mnh" id="C1W-Wk-nb9"/>
+                <outlet property="tag7" destination="N06-f2-jX1" id="dzB-Rx-L5f"/>
+                <outlet property="tag8" destination="8lD-Ye-ISm" id="L2q-bQ-ucA"/>
+                <outlet property="tag9" destination="4tu-Ha-3vc" id="pK2-Ar-2g7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8s-s5-goI">
+                    <rect key="frame" x="8" y="9" width="353" height="28"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxM-Gg-cOf">
+                            <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.9920000433921814" green="0.57129371166229248" blue="0.049186490476131439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="9aD-ik-yJ3"/>
+                                <constraint firstAttribute="width" constant="28" id="hv3-pV-h7g"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJm-HU-jN1">
+                            <rect key="frame" x="36" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.36862745099999999" green="0.60543745760000001" blue="0.3938109816917808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="8WC-Cf-kFX"/>
+                                <constraint firstAttribute="width" constant="28" id="lra-1R-7Mx"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-GW-iuU">
+                            <rect key="frame" x="72" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.067165502530232346" green="1" blue="0.25064678803195517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="F7E-EV-yX1"/>
+                                <constraint firstAttribute="height" constant="28" id="ykq-XI-JNx"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-7w-9I6">
+                            <rect key="frame" x="108" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.46556048459999999" green="0.49334746950000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="5AH-FM-Ep9"/>
+                                <constraint firstAttribute="width" constant="28" id="EvQ-3n-LrW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-DU-Zh1">
+                            <rect key="frame" x="144" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="2VP-ZK-gyV"/>
+                                <constraint firstAttribute="height" constant="28" id="OhN-1P-fPN"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-n7-Mnh">
+                            <rect key="frame" x="180" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.60578750628806699" green="0.20265175238598843" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="gFn-NC-n7t"/>
+                                <constraint firstAttribute="height" constant="28" id="gfK-YB-zUY"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N06-f2-jX1">
+                            <rect key="frame" x="216" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="0.002699924832559257" green="0.40060859659062115" blue="0.53719860406091369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="M0d-KD-Myy"/>
+                                <constraint firstAttribute="height" constant="28" id="f6L-fa-lt0"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-Ye-ISm">
+                            <rect key="frame" x="252" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="6fc-Ay-gtM"/>
+                                <constraint firstAttribute="height" constant="28" id="DeU-Ac-lth"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tu-Ha-3vc">
+                            <rect key="frame" x="288" y="0.0" width="28" height="28"/>
+                            <color key="backgroundColor" red="1" green="0.34582916501657868" blue="0.91280274949073892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="0aa-Za-SzI"/>
+                                <constraint firstAttribute="height" constant="28" id="nuc-NP-pm7"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xP5-ZF-2YC">
+                            <rect key="frame" x="324" y="0.0" width="29" height="28"/>
+                            <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="Ly0-wF-acf"/>
+                                <constraint firstAttribute="width" constant="28" id="yxY-ee-78c"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l8s-s5-goI" secondAttribute="trailing" constant="14" id="LQg-Hb-MmJ"/>
+                <constraint firstItem="l8s-s5-goI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YPG-Qx-aRt"/>
+                <constraint firstItem="l8s-s5-goI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="ajm-HJ-83U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="l8s-s5-goI" secondAttribute="bottom" constant="8" id="hWa-2u-7cu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="192.80000000000001" y="118.29085457271366"/>
+        </view>
+    </objects>
+</document>

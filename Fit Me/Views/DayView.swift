@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol DayViewRowProtocol {
+    var didTapDay: (() -> Void)? { get }
+    var viewState: CellState { get }
+    func tapped(_ sender: UITapGestureRecognizer)
+    
+}
+
 
 public class DayView: UIView {
     
     public var didTapDay: (() -> Void)?
     
-    
-    public var viewModel: AddViewModel? {
+    public var viewModel: TrainingViewModel? {
         didSet {
             buildUI()
         }
@@ -23,11 +29,23 @@ public class DayView: UIView {
     var viewState: CellState = .unselected {
         didSet {
             if viewState == .unselected {
-                expand()
+                expand { print("didTap") }
             } else {
-                expand()
+                expand { print("didTap") }
             }
         }
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        buildUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        buildUI()
     }
     
     private lazy var circleView: UIView = {
@@ -36,12 +54,14 @@ public class DayView: UIView {
         v.translatesAutoresizingMaskIntoConstraints =  false
         v.layer.cornerRadius = bounds.size.height/2
         v.heightAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+        v.widthAnchor.constraint(equalToConstant: Metrics.tagCircleColorSize)
+        v.backgroundColor = .actionColor
         v.layer.masksToBounds = true
         
         return v
     }()
     
-    private lazy var dayLabel: UILabel = {
+    public lazy var dayLabel: UILabel = {
         let l = UILabel()
         
         l.font = UIFont.systemFont(ofSize: Metrics.addTrainingSectionTitleFontSize, weight: Metrics.addTrainingSectionTitleFontWeight)
@@ -59,7 +79,7 @@ public class DayView: UIView {
         self.backgroundColor = .background
         
         addSubview(circleView)
-        addSubview(dayLabel)
+        circleView.addSubview(dayLabel)
         
         circleView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         circleView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
@@ -75,7 +95,6 @@ public class DayView: UIView {
     }
     
     @objc private func didTapCell() {
-        
         if viewState == .selected {
             viewState = .unselected
             didTapDay?()
@@ -95,7 +114,6 @@ public class DayView: UIView {
         circleView.alpha = 0
     }
     
-    
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
         didTapCell()
     }
@@ -110,29 +128,18 @@ public class DayView: UIView {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        expand()
+        expand {
+            print("didTapEnd")
+        }
     }
     
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         
-        expand()
-    }
-    
-    private func compress() {
-        UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DMakeScale(0.96, 0.96, 1)
-        }, completion: nil)
-    }
-    
-    private func expand() {
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DIdentity
-        }, completion: { _ in
+        expand {
             self.switchDaySelected()
-        })
+        }
     }
-    
     
     private func switchDaySelected() {
         if circleView.isHidden {

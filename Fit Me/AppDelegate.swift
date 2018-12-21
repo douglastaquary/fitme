@@ -15,9 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var coreData = CoreDataStack()
+    
+    private lazy var store: TrainingStore = {
+        return TrainingStore()
+    }()
+    
+    private lazy var flowController: AppFlowController = {
+        return AppFlowController(store: store)
+    }()
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        window?.rootViewController = flowController
+        window?.makeKeyAndVisible()
         return true
     }
 

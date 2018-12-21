@@ -8,18 +8,50 @@
 
 import UIKit
 
+protocol CategorySectionViewDelegate: class {
+    func toggleSection(header: CategoryView, section: Int)
+}
 
 public class CategoryView: UIView {
     
     public var didTapCategory: (() -> Void)?
     
-    public var viewModel: AddViewModel? {
+    var section: Int = 0
+    
+    public var viewModel: TrainingViewModel? {
         didSet {
             buildUI()
         }
     }
     
-    private lazy var arrowImageView: UIImageView = {
+    var item: CategoryViewModelItem? {
+        didSet {
+            guard let item = item else {
+                return
+            }
+            
+            categoryLabel.text = item.sectionTitle
+            setCollapsed(collapsed: item.isCollapsed)
+        }
+    }
+    
+    weak var delegate: CategorySectionViewDelegate?
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
+        
+        buildUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        buildUI()
+    }
+    
+    public lazy var arrowImageView: UIImageView = {
         let i = UIImageView()
         
         i.translatesAutoresizingMaskIntoConstraints =  false
@@ -29,7 +61,7 @@ public class CategoryView: UIView {
         return i
     }()
     
-    private lazy var categoryLabel: UILabel = {
+    public lazy var categoryLabel: UILabel = {
         let l = UILabel()
         
         l.font = UIFont.systemFont(ofSize: Metrics.categoryTitleFontSize, weight: Metrics.categoryDescriptionFontWeight)
@@ -41,6 +73,18 @@ public class CategoryView: UIView {
         return l
     }()
     
+    @objc private func didTapHeader() {
+        delegate?.toggleSection(header: self, section: section)
+    }
+    
+    public func setupView(categoria: String) {
+        categoryLabel.text = categoria
+    }
+    
+    func setCollapsed(collapsed: Bool) {
+        //arrowLabel?.rotate(collapsed ? 0.0 : .pi)
+    }
+    
     private func buildUI() {
         let contentView = self
         
@@ -49,11 +93,13 @@ public class CategoryView: UIView {
         addSubview(arrowImageView)
         addSubview(categoryLabel)
         
+        self.heightAnchor.constraint(equalToConstant: Metrics.sectionHeaderHeight).isActive = true
+        
         arrowImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding).isActive = true
         arrowImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         
-        categoryLabel.leadingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        categoryLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.padding*3).isActive = true
+        categoryLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.padding).isActive = true
     }
     
     private func didTapSection() {
@@ -78,26 +124,16 @@ public class CategoryView: UIView {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        expand()
+        expand { print("didTap") }
     }
     
     public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         
-        expand()
+        expand { print("didTap") }
     }
     
-    private func compress() {
-        UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DMakeScale(0.96, 0.96, 1)
-        }, completion: nil)
-    }
-    
-    private func expand() {
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DIdentity
-        }, completion: nil)
-    }
+
     
 
 }

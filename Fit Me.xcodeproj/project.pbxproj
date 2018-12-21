@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0F19D021690806008EBD45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */; };
+		4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1D217C240400C08658 /* UIView+extensions.swift */; };
+		4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */; };
+		4E064F22217C259100C08658 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F21217C259100C08658 /* CategoryViewModel.swift */; };
+		4E064F24217CCB8100C08658 /* UIViewTextViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F23217CCB8100C08658 /* UIViewTextViewModelProtocol.swift */; };
+		4E064F26217D29B100C08658 /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E064F25217D29B100C08658 /* TagView.xib */; };
+		4E064F28217D2C3F00C08658 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F27217D2C3F00C08658 /* TagView.swift */; };
+		4E064F2A217D2C7000C08658 /* BaseTemplateView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F29217D2C7000C08658 /* BaseTemplateView .swift */; };
+		4E064F2C217D3F5000C08658 /* DayColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E064F2B217D3F5000C08658 /* DayColorView.xib */; };
+		4E064F2E217D428F00C08658 /* DayColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F2D217D428F00C08658 /* DayColorView.swift */; };
+		4E0F19D021690806008EBD45 /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19CF21690806008EBD45 /* TrainingListViewController.swift */; };
 		4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */; };
 		4E0F19D7216A7CE2008EBD45 /* TagColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */; };
-		4E0F19D9216A7DD1008EBD45 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */; };
+		4E0F19D9216A7DD1008EBD45 /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19D8216A7DD1008EBD45 /* TrainingViewModel.swift */; };
 		4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */; };
-		4E0F19DD216AEFD3008EBD45 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */; };
+		4E0F19DD216AEFD3008EBD45 /* CreateTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DC216AEFD3008EBD45 /* CreateTrainingViewController.swift */; };
 		4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19DF216AF36B008EBD45 /* DayView.swift */; };
 		4E0F19E2216AF3AA008EBD45 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */; };
 		4E0F19E4216AF446008EBD45 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F19E3216AF446008EBD45 /* CategoryView.swift */; };
@@ -36,6 +45,24 @@
 		4EA9C9362161A5D600B2ADEB /* Fit_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9C9342161A5D600B2ADEB /* Fit_Me.xcdatamodeld */; };
 		4EA9C9382161A5D700B2ADEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9C9372161A5D700B2ADEB /* Assets.xcassets */; };
 		4EA9C93B2161A5D800B2ADEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9C9392161A5D800B2ADEB /* LaunchScreen.storyboard */; };
+		4EAAF88C21739E1200AC4C87 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF88B21739E1200AC4C87 /* Store.swift */; };
+		4EAAF88E2173A0F500AC4C87 /* TrainingNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF88D2173A0F500AC4C87 /* TrainingNameView.swift */; };
+		4EAAF8902173A12F00AC4C87 /* TrainingNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF88F2173A12F00AC4C87 /* TrainingNameTableViewCell.swift */; };
+		4EAAF8922173A31F00AC4C87 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8912173A31F00AC4C87 /* UITableView+Extensions.swift */; };
+		4EAAF8942173AEBD00AC4C87 /* TrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8932173AEBD00AC4C87 /* TrainingStore.swift */; };
+		4EAAF8962173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8952173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift */; };
+		4EAAF8972173D0DE00AC4C87 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435AB6216451D5005F4888 /* CoreDataStack.swift */; };
+		4EAAF8992173E45100AC4C87 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8982173E45100AC4C87 /* TagViewModel.swift */; };
+		4EAAF89C2173E68C00AC4C87 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF89B2173E68C00AC4C87 /* DayViewModel.swift */; };
+		4EAAF89E21740A7100AC4C87 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF89D21740A7100AC4C87 /* TagListView.swift */; };
+		4EAAF8A021740D0F00AC4C87 /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF89F21740D0F00AC4C87 /* DayListView.swift */; };
+		4EAAF8A22174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8A12174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift */; };
+		4EAAF8A421741AD100AC4C87 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8A321741AD100AC4C87 /* AppFlowController.swift */; };
+		4EAAF8A6217436D000AC4C87 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAAF8A5217436D000AC4C87 /* WelcomeView.swift */; };
+		4EAD4B73218E9AE900EFF62D /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */; };
+		4EAD4B77218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD4B76218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift */; };
+		4EAD4B79218FA3FC00EFF62D /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD4B78218FA3FC00EFF62D /* AddExerciseViewController.swift */; };
+		4EAD4B7D218FDB0B00EFF62D /* AddExerciseFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD4B7C218FDB0B00EFF62D /* AddExerciseFlowController.swift */; };
 		4EECF340216846C700113DD5 /* FitmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECF33F216846C700113DD5 /* FitmeButton.swift */; };
 		4EECF344216847FD00113DD5 /* UIImage+withColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECF343216847FD00113DD5 /* UIImage+withColor.swift */; };
 		4EECF3452168496000113DD5 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9C9552161A80300B2ADEB /* Metrics.swift */; };
@@ -70,12 +97,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4E064F1D217C240400C08658 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelItem.swift; sourceTree = "<group>"; };
+		4E064F21217C259100C08658 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		4E064F23217CCB8100C08658 /* UIViewTextViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTextViewModelProtocol.swift; sourceTree = "<group>"; };
+		4E064F25217D29B100C08658 /* TagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
+		4E064F27217D2C3F00C08658 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		4E064F29217D2C7000C08658 /* BaseTemplateView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseTemplateView .swift"; sourceTree = "<group>"; };
+		4E064F2B217D3F5000C08658 /* DayColorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayColorView.xib; sourceTree = "<group>"; };
+		4E064F2D217D428F00C08658 /* DayColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayColorView.swift; sourceTree = "<group>"; };
+		4E0F19CF21690806008EBD45 /* TrainingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewController.swift; sourceTree = "<group>"; };
 		4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagColorView.swift; sourceTree = "<group>"; };
-		4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		4E0F19D8216A7DD1008EBD45 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagColorTableViewCell.swift; sourceTree = "<group>"; };
-		4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		4E0F19DC216AEFD3008EBD45 /* CreateTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingViewController.swift; sourceTree = "<group>"; };
 		4E0F19DF216AF36B008EBD45 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
 		4E0F19E3216AF446008EBD45 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -105,6 +141,23 @@
 		4EA9C9572161AADA00B2ADEB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4EA9C9592161ADB300B2ADEB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4EA9C95B2161AE1A00B2ADEB /* Bundle+Fitme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Fitme.swift"; sourceTree = "<group>"; };
+		4EAAF88B21739E1200AC4C87 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		4EAAF88D2173A0F500AC4C87 /* TrainingNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingNameView.swift; sourceTree = "<group>"; };
+		4EAAF88F2173A12F00AC4C87 /* TrainingNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingNameTableViewCell.swift; sourceTree = "<group>"; };
+		4EAAF8912173A31F00AC4C87 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		4EAAF8932173AEBD00AC4C87 /* TrainingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingStore.swift; sourceTree = "<group>"; };
+		4EAAF8952173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingViewModel+NSUserActivity.swift"; sourceTree = "<group>"; };
+		4EAAF8982173E45100AC4C87 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
+		4EAAF89B2173E68C00AC4C87 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		4EAAF89D21740A7100AC4C87 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		4EAAF89F21740D0F00AC4C87 /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
+		4EAAF8A12174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingHeaderSectionView.swift; sourceTree = "<group>"; };
+		4EAAF8A321741AD100AC4C87 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		4EAAF8A5217436D000AC4C87 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
+		4EAD4B76218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSuccessfullyAddedView.swift; sourceTree = "<group>"; };
+		4EAD4B78218FA3FC00EFF62D /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
+		4EAD4B7C218FDB0B00EFF62D /* AddExerciseFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseFlowController.swift; sourceTree = "<group>"; };
 		4EECF33F216846C700113DD5 /* FitmeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeButton.swift; sourceTree = "<group>"; };
 		4EECF343216847FD00113DD5 /* UIImage+withColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+withColor.swift"; sourceTree = "<group>"; };
 		4EECF34A2168503800113DD5 /* AttributedString+FontColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+FontColor.swift"; sourceTree = "<group>"; };
@@ -132,7 +185,8 @@
 		4E0F19CE216907F0008EBD45 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				4E0F19D5216A7BAB008EBD45 /* Add */,
+				4EAD4B71218E9A8A00EFF62D /* Exercise */,
+				4E0F19D5216A7BAB008EBD45 /* CreateTraining */,
 				4E0F19D4216A7A91008EBD45 /* Training */,
 				4E0F19D1216911FD008EBD45 /* Welcome */,
 			);
@@ -143,7 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				4E0F19D22169127F008EBD45 /* WelcomeViewModel.swift */,
-				4E0F19CF21690806008EBD45 /* WelcomeViewController.swift */,
+				4E0F19CF21690806008EBD45 /* TrainingListViewController.swift */,
+				4EAAF8A5217436D000AC4C87 /* WelcomeView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -151,31 +206,30 @@
 		4E0F19D4216A7A91008EBD45 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				4E0F19D8216A7DD1008EBD45 /* TrainingViewModel.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
 		};
-		4E0F19D5216A7BAB008EBD45 /* Add */ = {
+		4E0F19D5216A7BAB008EBD45 /* CreateTraining */ = {
 			isa = PBXGroup;
 			children = (
+				4EAAF89A2173E5C800AC4C87 /* Tags */,
 				4E0F19DE216AF0BC008EBD45 /* Cells */,
-				4E0F19D8216A7DD1008EBD45 /* AddViewModel.swift */,
-				4E0F19DC216AEFD3008EBD45 /* AddTableViewController.swift */,
+				4E0F19DC216AEFD3008EBD45 /* CreateTrainingViewController.swift */,
+				4E064F21217C259100C08658 /* CategoryViewModel.swift */,
 			);
-			path = Add;
+			path = CreateTraining;
 			sourceTree = "<group>";
 		};
 		4E0F19DE216AF0BC008EBD45 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */,
-				4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */,
-				4E0F19DF216AF36B008EBD45 /* DayView.swift */,
 				4E0F19E1216AF3AA008EBD45 /* DayTableViewCell.swift */,
-				4E0F19E3216AF446008EBD45 /* CategoryView.swift */,
 				4E0F19E9216AF48F008EBD45 /* CategoryTableViewCell.swift */,
-				4E0F19E5216AF454008EBD45 /* ExerciseView.swift */,
 				4E0F19E7216AF471008EBD45 /* ExerciseTableViewCell.swift */,
+				4EAAF88F2173A12F00AC4C87 /* TrainingNameTableViewCell.swift */,
+				4EAAF89B2173E68C00AC4C87 /* DayViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -194,6 +248,8 @@
 			children = (
 				4EA9C9342161A5D600B2ADEB /* Fit_Me.xcdatamodeld */,
 				4E435AB6216451D5005F4888 /* CoreDataStack.swift */,
+				4EAAF88B21739E1200AC4C87 /* Store.swift */,
+				4EAAF8932173AEBD00AC4C87 /* TrainingStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -209,6 +265,7 @@
 				4E435ACE21645EA9005F4888 /* Training+CoreDataProperties.swift */,
 				4E435ACF21645EA9005F4888 /* ExerciseGroup+CoreDataClass.swift */,
 				4E435AD021645EA9005F4888 /* ExerciseGroup+CoreDataProperties.swift */,
+				4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,6 +299,7 @@
 				4EECF342216847EB00113DD5 /* Extensions */,
 				4EECF33E216846B500113DD5 /* Views */,
 				4EA9C92D2161A5D600B2ADEB /* AppDelegate.swift */,
+				4EAAF8A321741AD100AC4C87 /* AppFlowController.swift */,
 				4EA9C93C2161A5D800B2ADEB /* Info.plist */,
 			);
 			path = "Fit Me";
@@ -258,10 +316,44 @@
 			path = Definitions;
 			sourceTree = "<group>";
 		};
+		4EAAF89A2173E5C800AC4C87 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19DA216AED57008EBD45 /* TagColorTableViewCell.swift */,
+				4EAAF8982173E45100AC4C87 /* TagViewModel.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		4EAD4B71218E9A8A00EFF62D /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */,
+				4EAD4B76218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift */,
+				4EAD4B78218FA3FC00EFF62D /* AddExerciseViewController.swift */,
+				4EAD4B7C218FDB0B00EFF62D /* AddExerciseFlowController.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
 		4EECF33E216846B500113DD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4EAAF89D21740A7100AC4C87 /* TagListView.swift */,
+				4EAAF89F21740D0F00AC4C87 /* DayListView.swift */,
+				4E0F19D6216A7CE2008EBD45 /* TagColorView.swift */,
+				4E0F19DF216AF36B008EBD45 /* DayView.swift */,
+				4E0F19E3216AF446008EBD45 /* CategoryView.swift */,
+				4E0F19E5216AF454008EBD45 /* ExerciseView.swift */,
+				4EAAF88D2173A0F500AC4C87 /* TrainingNameView.swift */,
 				4EECF33F216846C700113DD5 /* FitmeButton.swift */,
+				4EAAF8A12174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift */,
+				4E064F23217CCB8100C08658 /* UIViewTextViewModelProtocol.swift */,
+				4E064F25217D29B100C08658 /* TagView.xib */,
+				4E064F27217D2C3F00C08658 /* TagView.swift */,
+				4E064F29217D2C7000C08658 /* BaseTemplateView .swift */,
+				4E064F2B217D3F5000C08658 /* DayColorView.xib */,
+				4E064F2D217D428F00C08658 /* DayColorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +363,9 @@
 			children = (
 				4EECF343216847FD00113DD5 /* UIImage+withColor.swift */,
 				4EECF34A2168503800113DD5 /* AttributedString+FontColor.swift */,
+				4EAAF8912173A31F00AC4C87 /* UITableView+Extensions.swift */,
+				4EAAF8952173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift */,
+				4E064F1D217C240400C08658 /* UIView+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,6 +484,8 @@
 				4EA9C93B2161A5D800B2ADEB /* LaunchScreen.storyboard in Resources */,
 				4EA9C9382161A5D700B2ADEB /* Assets.xcassets in Resources */,
 				4EA9C9332161A5D600B2ADEB /* Main.storyboard in Resources */,
+				4E064F2C217D3F5000C08658 /* DayColorView.xib in Resources */,
+				4E064F26217D29B100C08658 /* TagView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,24 +515,49 @@
 				4E0F19E6216AF454008EBD45 /* ExerciseView.swift in Sources */,
 				4E0F19E8216AF471008EBD45 /* ExerciseTableViewCell.swift in Sources */,
 				4EA9C9362161A5D600B2ADEB /* Fit_Me.xcdatamodeld in Sources */,
+				4E064F2E217D428F00C08658 /* DayColorView.swift in Sources */,
 				4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */,
-				4E0F19D021690806008EBD45 /* WelcomeViewController.swift in Sources */,
+				4EAAF88E2173A0F500AC4C87 /* TrainingNameView.swift in Sources */,
+				4EAAF8992173E45100AC4C87 /* TagViewModel.swift in Sources */,
+				4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */,
+				4E0F19D021690806008EBD45 /* TrainingListViewController.swift in Sources */,
+				4EAAF88C21739E1200AC4C87 /* Store.swift in Sources */,
+				4EAAF8A22174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift in Sources */,
+				4E064F2A217D2C7000C08658 /* BaseTemplateView .swift in Sources */,
+				4EAD4B79218FA3FC00EFF62D /* AddExerciseViewController.swift in Sources */,
+				4E064F22217C259100C08658 /* CategoryViewModel.swift in Sources */,
 				4EECF3452168496000113DD5 /* Metrics.swift in Sources */,
+				4EAAF8A421741AD100AC4C87 /* AppFlowController.swift in Sources */,
 				4EECF340216846C700113DD5 /* FitmeButton.swift in Sources */,
+				4EAAF8962173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift in Sources */,
 				4EECF3462168496700113DD5 /* Colors.swift in Sources */,
 				4E0F19E4216AF446008EBD45 /* CategoryView.swift in Sources */,
 				4E0F19E2216AF3AA008EBD45 /* DayTableViewCell.swift in Sources */,
 				4E0F19D7216A7CE2008EBD45 /* TagColorView.swift in Sources */,
+				4EAAF8902173A12F00AC4C87 /* TrainingNameTableViewCell.swift in Sources */,
+				4EAD4B7D218FDB0B00EFF62D /* AddExerciseFlowController.swift in Sources */,
 				4E0F19EA216AF48F008EBD45 /* CategoryTableViewCell.swift in Sources */,
 				4EECF34B2168503800113DD5 /* AttributedString+FontColor.swift in Sources */,
+				4EAD4B77218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift in Sources */,
+				4EAAF8A6217436D000AC4C87 /* WelcomeView.swift in Sources */,
 				4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */,
+				4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */,
 				4EECF3482168496C00113DD5 /* Bundle+Fitme.swift in Sources */,
-				4E0F19D9216A7DD1008EBD45 /* AddViewModel.swift in Sources */,
+				4EAAF8942173AEBD00AC4C87 /* TrainingStore.swift in Sources */,
+				4EAAF89C2173E68C00AC4C87 /* DayViewModel.swift in Sources */,
+				4E0F19D9216A7DD1008EBD45 /* TrainingViewModel.swift in Sources */,
 				4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */,
+				4EAAF8922173A31F00AC4C87 /* UITableView+Extensions.swift in Sources */,
+				4E064F28217D2C3F00C08658 /* TagView.swift in Sources */,
 				4EECF344216847FD00113DD5 /* UIImage+withColor.swift in Sources */,
 				4EA9C92E2161A5D600B2ADEB /* AppDelegate.swift in Sources */,
 				4EECF3472168496A00113DD5 /* Constants.swift in Sources */,
-				4E0F19DD216AEFD3008EBD45 /* AddTableViewController.swift in Sources */,
+				4EAAF8A021740D0F00AC4C87 /* DayListView.swift in Sources */,
+				4E064F24217CCB8100C08658 /* UIViewTextViewModelProtocol.swift in Sources */,
+				4E0F19DD216AEFD3008EBD45 /* CreateTrainingViewController.swift in Sources */,
+				4EAD4B73218E9AE900EFF62D /* AddExerciseView.swift in Sources */,
+				4EAAF8972173D0DE00AC4C87 /* CoreDataStack.swift in Sources */,
+				4EAAF89E21740A7100AC4C87 /* TagListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +776,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V95FQX348;
 				INFOPLIST_FILE = "Fit Me/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,6 +796,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6V95FQX348;
 				INFOPLIST_FILE = "Fit Me/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
