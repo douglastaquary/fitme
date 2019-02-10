@@ -1,0 +1,20 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "d6a45d2eec78c72a8de063e1f928400d"
+build_time: [1549825376, 258192000]
+inputs:
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/BitBucketServerDSL.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Danger.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/DangerDSL.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/DangerResults.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/DangerUtils.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Extensions/DateFormatterExtensions.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Extensions/NSRegularExpressionExtensions.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/File.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/GitDSL.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/GitHubDSL.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Plugins/SwiftLint/CurrentPathProvider.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Plugins/SwiftLint/ShellExecutor.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Plugins/SwiftLint/SwiftLint.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Plugins/SwiftLint/SwiftLintViolation.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Report.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Danger/Settings.swift": [1549818175, 0]

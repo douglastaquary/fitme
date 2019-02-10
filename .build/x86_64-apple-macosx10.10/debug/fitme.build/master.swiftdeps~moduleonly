@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "c55eb3c9fd986c5dd65e5f2deda5b861"
+build_time: [1549825378, 285723000]
+inputs:
+  "/Users/resource/Documents/Douglas/Github/fitme/Fit Me/Stringify.swift": [1549819643, 0]

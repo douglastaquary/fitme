@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/master.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/Commands/Edit.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Edit.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Commands/Edit.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Edit~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Edit.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/Commands/RunDangerJS.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/RunDangerJS.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Commands/RunDangerJS.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/RunDangerJS~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/RunDangerJS.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/Commands/Runner.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Runner.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Commands/Runner.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Runner.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/EditXcodeProj.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/EditXcodeProj.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/EditXcodeProj.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/EditXcodeProj~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/EditXcodeProj.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/MarathonScriptManager.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/MarathonScriptManager.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/MarathonScriptManager.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/MarathonScriptManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/MarathonScriptManager.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/Script+Imports.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Script+Imports.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Script+Imports.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Script+Imports~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/Script+Imports.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/swift.git-5125902445843264032/Sources/Runner/main.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/main.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/main.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Runner.build/main.swiftdeps"
+  }
+}

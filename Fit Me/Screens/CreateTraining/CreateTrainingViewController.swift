@@ -262,7 +262,11 @@ extension CreateTrainingViewController {
         let moc = CoreDataStack()
         let context = moc.persistentContainer.viewContext
         let user = User(context: context)
-        delegate?.didTapRecordButton(to: user, training: Training(context: context))
+        
+        training = Training(context: context)
+        
+        guard let newTraining = training else { return }
+        delegate?.didTapRecordButton(to: user, training: newTraining)
     }
 }
 

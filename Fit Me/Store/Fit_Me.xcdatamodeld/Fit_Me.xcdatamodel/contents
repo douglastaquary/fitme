@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A389" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Exercise" representedClassName="Exercise" parentEntity="ExerciseGroup" syncable="YES" codeGenerationType="class">
         <attribute name="didComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="exerciseName" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,7 +30,7 @@
     <elements>
         <element name="Exercise" positionX="-332.15234375" positionY="-75.953125" width="128" height="105"/>
         <element name="ExerciseGroup" positionX="-72.12890625" positionY="130.47265625" width="128" height="75"/>
-        <element name="Training" positionX="-388.43359375" positionY="-306.2578125" width="128" height="133"/>
-        <element name="User" positionX="-664.109375" positionY="-306.3046875" width="128" height="150"/>
+        <element name="Training" positionX="-388.43359375" positionY="-313.01171875" width="128" height="135"/>
+        <element name="User" positionX="-675.91015625" positionY="-322.671875" width="128" height="150"/>
     </elements>
 </model>

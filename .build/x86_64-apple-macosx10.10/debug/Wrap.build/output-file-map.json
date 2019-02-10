@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Wrap.build/master.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Wrap.git--6536465387411871986/Sources/Wrap.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Wrap.build/Wrap.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Wrap.build/Wrap.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Wrap.build/Wrap~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Wrap.build/Wrap.swiftdeps"
+  }
+}

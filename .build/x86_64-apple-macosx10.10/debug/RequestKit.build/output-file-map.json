@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/master.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/JSONPostRouter.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/JSONPostRouter.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/JSONPostRouter.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/JSONPostRouter~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/JSONPostRouter.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/RequestKitSession.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/RequestKitSession.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/RequestKitSession.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/RequestKitSession~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/RequestKitSession.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/Router.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/Router.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/Router.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/Router~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/RequestKit.build/Router.swiftdeps"
+  }
+}

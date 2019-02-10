@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "5605bea0970ea0250d32b1ef444abadf"
+build_time: [1549825374, 352498000]
+inputs:
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/JSONPostRouter.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/RequestKitSession.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/RequestKit.git--8081542268252177846/Sources/RequestKit/Router.swift": [1549818175, 0]

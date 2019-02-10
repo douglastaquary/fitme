@@ -1,0 +1,337 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "Sa"
+provides-member:
+- ["Sa", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private ">="
+- "Array"
+- "Bool"
+- "CastingPrecedence"
+- !private "Int"
+- "String"
+- "UnboxCollectionElementTransformer"
+- !private "UnboxPathError"
+- "UnboxPathNode"
+- "UnboxableCollection"
+depends-member:
+- ["Sa", "Array"]
+- ["Sa", "Bool"]
+- ["Sa", "Element"]
+- !private ["Sa", "Int"]
+- ["Sa", "String"]
+- ["Sa", "UnboxCollectionElementTransformer"]
+- !private ["Sa", "UnboxPathError"]
+- ["Sa", "UnboxValue"]
+- !private ["Sa", "count"]
+- ["Sa", "deinit"]
+- !private ["Sa", "enumerated"]
+- !private ["Sa", "subscript"]
+- ["Sa", "unbox"]
+- ["Sa", "unboxPathValue"]
+- !private ["s13ArrayProtocolP", "Int"]
+- !private ["s13ArrayProtocolP", "UnboxPathError"]
+- ["s13ArrayProtocolP", "UnboxValue"]
+- !private ["s13ArrayProtocolP", "count"]
+- !private ["s13ArrayProtocolP", "enumerated"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- ["s13ArrayProtocolP", "unbox"]
+- ["s13ArrayProtocolP", "unboxPathValue"]
+- !private ["SK", "Int"]
+- !private ["SK", "UnboxPathError"]
+- ["SK", "UnboxValue"]
+- !private ["SK", "count"]
+- !private ["SK", "enumerated"]
+- !private ["SK", "subscript"]
+- ["SK", "unbox"]
+- ["SK", "unboxPathValue"]
+- !private ["Sz", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "UnboxPathError"]
+- ["s7CVarArgP", "UnboxValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "unbox"]
+- ["s7CVarArgP", "unboxPathValue"]
+- !private ["Sl", "Int"]
+- !private ["Sl", "UnboxPathError"]
+- ["Sl", "UnboxValue"]
+- !private ["Sl", "count"]
+- !private ["Sl", "enumerated"]
+- !private ["Sl", "subscript"]
+- ["Sl", "unbox"]
+- ["Sl", "unboxPathValue"]
+- !private ["SL", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "UnboxPathError"]
+- ["s28CustomDebugStringConvertibleP", "UnboxValue"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "orThrow"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "unbox"]
+- ["s28CustomDebugStringConvertibleP", "unboxPathValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "Int"]
+- !private ["s17CustomReflectableP", "UnboxPathError"]
+- ["s17CustomReflectableP", "UnboxValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "orThrow"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "unbox"]
+- ["s17CustomReflectableP", "unboxPathValue"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "UnboxPathError"]
+- ["s23CustomStringConvertibleP", "UnboxValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "invalidArrayElement"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "unbox"]
+- ["s23CustomStringConvertibleP", "unboxPathValue"]
+- !private ["Se", "Int"]
+- !private ["Se", "UnboxPathError"]
+- ["Se", "UnboxValue"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "count"]
+- !private ["Se", "enumerated"]
+- !private ["Se", "init"]
+- !private ["Se", "orThrow"]
+- !private ["Se", "subscript"]
+- ["Se", "unbox"]
+- ["Se", "unboxPathValue"]
+- !private ["SE", "Int"]
+- !private ["SE", "UnboxPathError"]
+- ["SE", "UnboxValue"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "count"]
+- !private ["SE", "enumerated"]
+- !private ["SE", "init"]
+- !private ["SE", "orThrow"]
+- !private ["SE", "subscript"]
+- ["SE", "unbox"]
+- ["SE", "unboxPathValue"]
+- !private ["s18EnumeratedSequenceV", "map"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "UnboxPathError"]
+- ["SQ", "UnboxValue"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "count"]
+- !private ["SQ", "enumerated"]
+- !private ["SQ", "init"]
+- !private ["SQ", "orThrow"]
+- !private ["SQ", "subscript"]
+- ["SQ", "unbox"]
+- ["SQ", "unboxPathValue"]
+- !private ["s5ErrorP", "invalidArrayElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Int"]
+- !private ["s25ExpressibleByArrayLiteralP", "UnboxPathError"]
+- ["s25ExpressibleByArrayLiteralP", "UnboxValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- ["s25ExpressibleByArrayLiteralP", "unbox"]
+- ["s25ExpressibleByArrayLiteralP", "unboxPathValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "orThrow"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "Int"]
+- !private ["SH", "UnboxPathError"]
+- ["SH", "UnboxValue"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "count"]
+- !private ["SH", "enumerated"]
+- !private ["SH", "init"]
+- !private ["SH", "orThrow"]
+- !private ["SH", "subscript"]
+- ["SH", "unbox"]
+- ["SH", "unboxPathValue"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "Int"]
+- !private ["SM", "UnboxPathError"]
+- ["SM", "UnboxValue"]
+- !private ["SM", "count"]
+- !private ["SM", "enumerated"]
+- !private ["SM", "subscript"]
+- ["SM", "unbox"]
+- ["SM", "unboxPathValue"]
+- !private ["Sj", "init"]
+- !private ["Sq", "orThrow"]
+- !private ["Sk", "Int"]
+- !private ["Sk", "UnboxPathError"]
+- ["Sk", "UnboxValue"]
+- !private ["Sk", "count"]
+- !private ["Sk", "enumerated"]
+- !private ["Sk", "subscript"]
+- ["Sk", "unbox"]
+- ["Sk", "unboxPathValue"]
+- !private ["Sm", "Int"]
+- !private ["Sm", "UnboxPathError"]
+- ["Sm", "UnboxValue"]
+- !private ["Sm", "count"]
+- !private ["Sm", "enumerated"]
+- !private ["Sm", "subscript"]
+- ["Sm", "unbox"]
+- ["Sm", "unboxPathValue"]
+- !private ["ST", "Int"]
+- !private ["ST", "UnboxPathError"]
+- ["ST", "UnboxValue"]
+- !private ["ST", "count"]
+- !private ["ST", "enumerated"]
+- !private ["ST", "map"]
+- !private ["ST", "subscript"]
+- ["ST", "unbox"]
+- ["ST", "unboxPathValue"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["5Unbox0A28CollectionElementTransformerP", "UnboxRawElement"]
+- !private ["5Unbox0A28CollectionElementTransformerP", "unbox"]
+- !private ["5Unbox0A10CompatibleP", "Int"]
+- !private ["5Unbox0A10CompatibleP", "UnboxPathError"]
+- ["5Unbox0A10CompatibleP", "UnboxValue"]
+- ["5Unbox0A10CompatibleP", ""]
+- !private ["5Unbox0A10CompatibleP", "_getBuiltinLogicValue"]
+- !private ["5Unbox0A10CompatibleP", "count"]
+- !private ["5Unbox0A10CompatibleP", "enumerated"]
+- !private ["5Unbox0A10CompatibleP", "init"]
+- !private ["5Unbox0A10CompatibleP", "subscript"]
+- ["5Unbox0A10CompatibleP", "unbox"]
+- ["5Unbox0A10CompatibleP", "unboxPathValue"]
+- !private ["5Unbox0A9PathErrorO", "deinit"]
+- !private ["5Unbox0A9PathErrorO", "invalidArrayElement"]
+- !private ["5Unbox0A8PathNodeP", "Int"]
+- !private ["5Unbox0A8PathNodeP", "UnboxPathError"]
+- ["5Unbox0A8PathNodeP", "UnboxValue"]
+- ["5Unbox0A8PathNodeP", ""]
+- !private ["5Unbox0A8PathNodeP", "count"]
+- !private ["5Unbox0A8PathNodeP", "enumerated"]
+- !private ["5Unbox0A8PathNodeP", "subscript"]
+- ["5Unbox0A8PathNodeP", "unbox"]
+- ["5Unbox0A8PathNodeP", "unboxPathValue"]
+- !private ["5Unbox19UnboxableCollectionP", "Int"]
+- !private ["5Unbox19UnboxableCollectionP", "UnboxPathError"]
+- ["5Unbox19UnboxableCollectionP", "UnboxValue"]
+- ["5Unbox19UnboxableCollectionP", ""]
+- !private ["5Unbox19UnboxableCollectionP", "count"]
+- !private ["5Unbox19UnboxableCollectionP", "enumerated"]
+- !private ["5Unbox19UnboxableCollectionP", "subscript"]
+- ["5Unbox19UnboxableCollectionP", "unbox"]
+- ["5Unbox19UnboxableCollectionP", "unboxPathValue"]
+- !private ["5Unbox16UnboxableRawTypeP", "_getBuiltinLogicValue"]
+- !private ["5Unbox16UnboxableRawTypeP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s24_DestructorSafeContainerP", "Int"]
+- !private ["s24_DestructorSafeContainerP", "UnboxPathError"]
+- ["s24_DestructorSafeContainerP", "UnboxValue"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- ["s24_DestructorSafeContainerP", "unbox"]
+- ["s24_DestructorSafeContainerP", "unboxPathValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Int"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "UnboxPathError"]
+- ["s35_HasCustomAnyHashableRepresentationP", "UnboxValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["s35_HasCustomAnyHashableRepresentationP", "unbox"]
+- ["s35_HasCustomAnyHashableRepresentationP", "unboxPathValue"]
+- !private ["s21_ObjectiveCBridgeableP", "Int"]
+- !private ["s21_ObjectiveCBridgeableP", "UnboxPathError"]
+- ["s21_ObjectiveCBridgeableP", "UnboxValue"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "orThrow"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s21_ObjectiveCBridgeableP", "unbox"]
+- ["s21_ObjectiveCBridgeableP", "unboxPathValue"]
+depends-nominal:
+- "Sa"
+- "s13ArrayProtocolP"
+- "SK"
+- !private "Sz"
+- !private "Sb"
+- "s7CVarArgP"
+- "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- !private "s18EnumeratedSequenceV"
+- "SQ"
+- !private "s5ErrorP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "SM"
+- !private "Sj"
+- !private "Sq"
+- "Sk"
+- "Sm"
+- "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "5Unbox0A28CollectionElementTransformerP"
+- "5Unbox0A10CompatibleP"
+- !private "5Unbox0A9PathErrorO"
+- "5Unbox0A8PathNodeP"
+- "5Unbox19UnboxableCollectionP"
+- !private "5Unbox16UnboxableRawTypeP"
+- !private "s18_BitwiseOperationsP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "cb4b7d77c038c5a58d6c0370a1739cc4"

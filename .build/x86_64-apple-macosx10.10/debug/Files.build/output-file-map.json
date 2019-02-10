@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Files.build/master.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Files.git-2878261849060963779/Sources/Files.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Files.build/Files.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Files.build/Files.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Files.build/Files~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/Files.build/Files.swiftdeps"
+  }
+}

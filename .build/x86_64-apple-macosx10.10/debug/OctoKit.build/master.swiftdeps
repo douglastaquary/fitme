@@ -1,0 +1,18 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "b4f74802d18ca1517c99b3daab44a93b"
+build_time: [1549825375, 159756000]
+inputs:
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Configuration.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Follow.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Issue.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Label.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Milestone.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Octokit.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Parameters.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/PublicKey.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/PullRequest.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Repositories.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Stars.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/Time.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/URL+URLParameters.swift": [1549818175, 0]
+  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/octokit.swift-3620727819898713436/OctoKit/User.swift": [1549818175, 0]

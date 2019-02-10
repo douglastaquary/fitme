@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/fitme.build/master.swiftdeps"
+  },
+  "/Users/resource/Documents/Douglas/Github/fitme/Fit Me/Stringify.swift": {
+    "dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/fitme.build/Stringify.d",
+    "object": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/fitme.build/Stringify.swift.o",
+    "swiftmodule": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/fitme.build/Stringify~partial.swiftmodule",
+    "swift-dependencies": "/Users/resource/Documents/Douglas/Github/fitme/.build/x86_64-apple-macosx10.10/debug/fitme.build/Stringify.swiftdeps"
+  }
+}

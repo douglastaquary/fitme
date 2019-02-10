@@ -1,0 +1,135 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "So15NSDateFormatterC"
+provides-member:
+- ["So15NSDateFormatterC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Date"
+- "DateFormatter"
+- "String"
+- "UnboxFormatter"
+depends-member:
+- ["s7CVarArgP", "UnboxFormattedType"]
+- ["s7CVarArgP", "UnboxRawValue"]
+- ["s7CVarArgP", "_Default_UnboxFormattedType"]
+- ["s7CVarArgP", "_Default_UnboxRawValue"]
+- !private ["s7CVarArgP", "date"]
+- ["s7CVarArgP", "format"]
+- ["s28CustomDebugStringConvertibleP", "UnboxFormattedType"]
+- ["s28CustomDebugStringConvertibleP", "UnboxRawValue"]
+- ["s28CustomDebugStringConvertibleP", "_Default_UnboxFormattedType"]
+- ["s28CustomDebugStringConvertibleP", "_Default_UnboxRawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "date"]
+- ["s28CustomDebugStringConvertibleP", "format"]
+- ["s23CustomStringConvertibleP", "UnboxFormattedType"]
+- ["s23CustomStringConvertibleP", "UnboxRawValue"]
+- ["s23CustomStringConvertibleP", "_Default_UnboxFormattedType"]
+- ["s23CustomStringConvertibleP", "_Default_UnboxRawValue"]
+- !private ["s23CustomStringConvertibleP", "date"]
+- ["s23CustomStringConvertibleP", "format"]
+- ["So15NSDateFormatterC", "Date"]
+- ["So15NSDateFormatterC", "String"]
+- ["So15NSDateFormatterC", "UnboxFormattedType"]
+- ["So15NSDateFormatterC", "UnboxRawValue"]
+- ["So15NSDateFormatterC", "_Default_UnboxFormattedType"]
+- ["So15NSDateFormatterC", "_Default_UnboxRawValue"]
+- !private ["So15NSDateFormatterC", "date"]
+- ["So15NSDateFormatterC", "deinit"]
+- ["So15NSDateFormatterC", "format"]
+- ["SQ", "UnboxFormattedType"]
+- ["SQ", "UnboxRawValue"]
+- ["SQ", "_Default_UnboxFormattedType"]
+- ["SQ", "_Default_UnboxRawValue"]
+- !private ["SQ", "date"]
+- ["SQ", "format"]
+- ["So11NSFormatterC", "Date"]
+- ["So11NSFormatterC", "String"]
+- ["So11NSFormatterC", "UnboxFormattedType"]
+- ["So11NSFormatterC", "UnboxRawValue"]
+- ["So11NSFormatterC", "_Default_UnboxFormattedType"]
+- ["So11NSFormatterC", "_Default_UnboxRawValue"]
+- !private ["So11NSFormatterC", "date"]
+- ["So11NSFormatterC", "format"]
+- ["SH", "UnboxFormattedType"]
+- ["SH", "UnboxRawValue"]
+- ["SH", "_Default_UnboxFormattedType"]
+- ["SH", "_Default_UnboxRawValue"]
+- !private ["SH", "date"]
+- ["SH", "format"]
+- ["So8NSCodingP", "UnboxFormattedType"]
+- ["So8NSCodingP", "UnboxRawValue"]
+- ["So8NSCodingP", "_Default_UnboxFormattedType"]
+- ["So8NSCodingP", "_Default_UnboxRawValue"]
+- !private ["So8NSCodingP", "date"]
+- ["So8NSCodingP", "format"]
+- ["So9NSCopyingP", "UnboxFormattedType"]
+- ["So9NSCopyingP", "UnboxRawValue"]
+- ["So9NSCopyingP", "_Default_UnboxFormattedType"]
+- ["So9NSCopyingP", "_Default_UnboxRawValue"]
+- !private ["So9NSCopyingP", "date"]
+- ["So9NSCopyingP", "format"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UnboxFormattedType"]
+- ["So8NSObjectC", "UnboxRawValue"]
+- ["So8NSObjectC", "_Default_UnboxFormattedType"]
+- ["So8NSObjectC", "_Default_UnboxRawValue"]
+- !private ["So8NSObjectC", "date"]
+- ["So8NSObjectC", "format"]
+- ["So8NSObjectP", "UnboxFormattedType"]
+- ["So8NSObjectP", "UnboxRawValue"]
+- ["So8NSObjectP", "_Default_UnboxFormattedType"]
+- ["So8NSObjectP", "_Default_UnboxRawValue"]
+- !private ["So8NSObjectP", "date"]
+- ["So8NSObjectP", "format"]
+- ["SS", "deinit"]
+- ["5Unbox0A9FormatterP", "UnboxFormattedType"]
+- ["5Unbox0A9FormatterP", "UnboxRawValue"]
+- ["5Unbox0A9FormatterP", ""]
+- ["5Unbox0A9FormatterP", "_Default_UnboxFormattedType"]
+- ["5Unbox0A9FormatterP", "_Default_UnboxRawValue"]
+- !private ["5Unbox0A9FormatterP", "date"]
+- ["5Unbox0A9FormatterP", "format"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UnboxFormattedType"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UnboxRawValue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "_Default_UnboxFormattedType"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "_Default_UnboxRawValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "format"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "So15NSDateFormatterC"
+- "SQ"
+- "So11NSFormatterC"
+- "SH"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "SS"
+- "5Unbox0A9FormatterP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8a94d6c936d66430719c4d3396c22272"

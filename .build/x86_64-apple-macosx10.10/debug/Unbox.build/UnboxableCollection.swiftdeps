@@ -1,0 +1,115 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UnboxableCollection"
+provides-nominal:
+- "5Unbox19UnboxableCollectionP"
+provides-member:
+- ["5Unbox19UnboxableCollectionP", ""]
+- ["5Unbox19UnboxableCollectionP", "unbox"]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- "CastingPrecedence"
+- "Collection"
+- !private "UnboxCollectionElementClosureTransformer"
+- "UnboxCollectionElementTransformer"
+- "UnboxCompatible"
+- !private "UnboxPathError"
+- !private "Unboxable"
+- "UnboxableCollection"
+- !private "UnboxableDictionary"
+- !private "Unboxer"
+depends-member:
+- ["Sl", "Bool"]
+- ["Sl", "Self"]
+- !private ["Sl", "UnboxCollectionElementClosureTransformer"]
+- ["Sl", "UnboxCollectionElementTransformer"]
+- !private ["Sl", "UnboxCompatible"]
+- !private ["Sl", "UnboxPathError"]
+- ["Sl", "UnboxValue"]
+- !private ["Sl", "Unboxable"]
+- !private ["Sl", "UnboxableDictionary"]
+- !private ["Sl", "Unboxer"]
+- ["Sl", ""]
+- !private ["Sl", "unbox"]
+- !private ["s23CustomStringConvertibleP", "invalidCollectionElementType"]
+- !private ["s5ErrorP", "invalidCollectionElementType"]
+- ["ST", "Bool"]
+- ["ST", "Self"]
+- !private ["ST", "UnboxCollectionElementClosureTransformer"]
+- ["ST", "UnboxCollectionElementTransformer"]
+- !private ["ST", "UnboxCompatible"]
+- !private ["ST", "UnboxPathError"]
+- ["ST", "UnboxValue"]
+- !private ["ST", "Unboxable"]
+- !private ["ST", "UnboxableDictionary"]
+- !private ["ST", "Unboxer"]
+- !private ["ST", "unbox"]
+- ["5Unbox0A28CollectionElementTransformerP", "UnboxRawElement"]
+- ["5Unbox0A28CollectionElementTransformerP", "UnboxedElement"]
+- !private ["5Unbox0A28CollectionElementTransformerP", ""]
+- ["5Unbox0A28CollectionElementTransformerP", "_Default_UnboxRawElement"]
+- ["5Unbox0A28CollectionElementTransformerP", "_Default_UnboxedElement"]
+- !private ["5Unbox0A28CollectionElementTransformerP", "closure"]
+- !private ["5Unbox0A28CollectionElementTransformerP", "init"]
+- ["5Unbox0A28CollectionElementTransformerP", "unbox"]
+- ["5Unbox0A10CompatibleP", "Bool"]
+- ["5Unbox0A10CompatibleP", "Self"]
+- !private ["5Unbox0A10CompatibleP", "UnboxCollectionElementClosureTransformer"]
+- ["5Unbox0A10CompatibleP", "UnboxCollectionElementTransformer"]
+- !private ["5Unbox0A10CompatibleP", "UnboxCompatible"]
+- !private ["5Unbox0A10CompatibleP", "UnboxPathError"]
+- ["5Unbox0A10CompatibleP", "UnboxValue"]
+- !private ["5Unbox0A10CompatibleP", "Unboxable"]
+- !private ["5Unbox0A10CompatibleP", "UnboxableDictionary"]
+- !private ["5Unbox0A10CompatibleP", "Unboxer"]
+- ["5Unbox0A10CompatibleP", ""]
+- !private ["5Unbox0A10CompatibleP", "unbox"]
+- !private ["5Unbox0A9PathErrorO", "deinit"]
+- !private ["5Unbox0A9PathErrorO", "invalidCollectionElementType"]
+- !private ["5Unbox9UnboxableP", "init"]
+- !private ["5Unbox9UnboxableP", "init"]
+- ["5Unbox19UnboxableCollectionP", "Bool"]
+- ["5Unbox19UnboxableCollectionP", "Self"]
+- !private ["5Unbox19UnboxableCollectionP", "UnboxCollectionElementClosureTransformer"]
+- ["5Unbox19UnboxableCollectionP", "UnboxCollectionElementTransformer"]
+- !private ["5Unbox19UnboxableCollectionP", "UnboxCompatible"]
+- !private ["5Unbox19UnboxableCollectionP", "UnboxPathError"]
+- ["5Unbox19UnboxableCollectionP", "UnboxValue"]
+- !private ["5Unbox19UnboxableCollectionP", "Unboxable"]
+- !private ["5Unbox19UnboxableCollectionP", "UnboxableDictionary"]
+- !private ["5Unbox19UnboxableCollectionP", "Unboxer"]
+- ["5Unbox19UnboxableCollectionP", "unbox"]
+- !private ["5Unbox7UnboxerC", "init"]
+depends-nominal:
+- "Sl"
+- !private "s23CustomStringConvertibleP"
+- !private "s5ErrorP"
+- "ST"
+- "5Unbox0A28CollectionElementTransformerP"
+- "5Unbox0A10CompatibleP"
+- !private "5Unbox0A9PathErrorO"
+- !private "5Unbox9UnboxableP"
+- "5Unbox19UnboxableCollectionP"
+- !private "5Unbox7UnboxerC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d0f7ec2d9173d7023fd4301c99e795e3"
