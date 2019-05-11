@@ -1,17 +1,27 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
-    name: "Fit Me",
-    dependencies: [
-      .package(url: "https://github.com/danger/swift.git", from: "0.8.0"),
-      .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.1")
+    name: "fitme",
+    products: [
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(
+            name: "fitme",
+            targets: ["fitme"]),
     ],
-
+    dependencies: [
+        .package(url: "https://github.com/danger/swift.git", from: "1.0.0")
+    ],
     targets: [
-        // This is just an arbitrary Swift file in our app, that has
-        // no dependencies outside of Foundation, the dependencies section
-        // ensures that the library for Danger gets build also.
-        .target(name: "fitme", dependencies: ["Danger", "Yams"], path: "Fit Me", sources: ["Stringify.swift"]),
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
+        .target(
+            name: "fitme",
+            dependencies: ["Danger"]),
+        .testTarget(
+            name: "fitmeTests",
+            dependencies: ["fitme"]),
     ]
 )

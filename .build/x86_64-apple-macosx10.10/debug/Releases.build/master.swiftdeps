@@ -1,8 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "ede15d5acf15e9f8f5acc36d9dfbdd8c"
-build_time: [1549819657, 751405000]
-inputs:
-  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Releases.git-1536181087207498507/Sources/Array+Version.swift": [1549818174, 0]
-  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Releases.git-1536181087207498507/Sources/Releases.swift": [1549818174, 0]
-  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Releases.git-1536181087207498507/Sources/ReleasesError.swift": [1549818174, 0]
-  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Releases.git-1536181087207498507/Sources/Version.swift": [1549818174, 0]
