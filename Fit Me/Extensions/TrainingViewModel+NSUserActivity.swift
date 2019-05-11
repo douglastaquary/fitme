@@ -13,7 +13,7 @@ import CoreSpotlight
 
 public extension TrainingViewModel {
     
-    public struct Keys {
+    struct Keys {
         public static let identifier = "pid"
     }
     
