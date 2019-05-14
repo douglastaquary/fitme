@@ -52,3 +52,4 @@ if swiftFilesWithCopyright.count > 0 {
     warn("In Danger JS we don't include copyright headers, found them in: \(files)")
 }
 
+

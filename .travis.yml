@@ -1,0 +1,18 @@
+language: objective-c
+osx_image: xcode10.2
+
+branches:
+  only:
+   - master
+cache:
+- bundler
+
+before_install:
+- bundle update
+- bundle install
+
+script:
+- bundle exec danger
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
