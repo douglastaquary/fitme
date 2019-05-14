@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "f5202e86acf4c372bd44587cfe381761"
-build_time: [1549819657, 208648000]
-inputs:
-  "/Users/resource/Documents/Douglas/Github/fitme/.build/checkouts/Files.git-2878261849060963779/Sources/Files.swift": [1549818175, 0]
