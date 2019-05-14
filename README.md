@@ -1,3 +1,4 @@
 # fitme
 
-A description of this package.
+The new style to create yours workout series
+
