@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442662D1228B9C570051D91F /* FitmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662D0228B9C570051D91F /* FitmeTests.swift */; };
 		4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1D217C240400C08658 /* UIView+extensions.swift */; };
 		4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */; };
 		4E064F22217C259100C08658 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F21217C259100C08658 /* CategoryViewModel.swift */; };
@@ -73,6 +74,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		442662D3228B9C570051D91F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EA9C9222161A5D600B2ADEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EA9C9292161A5D600B2ADEB;
+			remoteInfo = "Fit Me";
+		};
 		4E435AAD21645169005F4888 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EA9C9222161A5D600B2ADEB /* Project object */;
@@ -97,6 +105,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		442662CE228B9C570051D91F /* FitmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		442662D0228B9C570051D91F /* FitmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeTests.swift; sourceTree = "<group>"; };
+		442662D2228B9C570051D91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E064F1D217C240400C08658 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelItem.swift; sourceTree = "<group>"; };
 		4E064F21217C259100C08658 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
@@ -164,6 +175,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		442662CB228B9C570051D91F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E435AA521645169005F4888 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +200,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442662CF228B9C570051D91F /* FitmeTests */ = {
+			isa = PBXGroup;
+			children = (
+				442662D0228B9C570051D91F /* FitmeTests.swift */,
+				442662D2228B9C570051D91F /* Info.plist */,
+			);
+			path = FitmeTests;
+			sourceTree = "<group>";
+		};
 		4E0F19CE216907F0008EBD45 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +264,10 @@
 		4E435AA921645169005F4888 /* FitmeKit */ = {
 			isa = PBXGroup;
 			children = (
+				4E435AB821645D62005F4888 /* Models */,
+				4E435AB5216451C8005F4888 /* Store */,
+				4EA9C9542161A67600B2ADEB /* Definitions */,
+				4EECF342216847EB00113DD5 /* Extensions */,
 				4E435AAA21645169005F4888 /* FitmeKit.h */,
 				4E435AAB21645169005F4888 /* Info.plist */,
 			);
@@ -275,6 +306,7 @@
 			children = (
 				4EA9C92C2161A5D600B2ADEB /* Fit Me */,
 				4E435AA921645169005F4888 /* FitmeKit */,
+				442662CF228B9C570051D91F /* FitmeTests */,
 				4EA9C92B2161A5D600B2ADEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -284,6 +316,7 @@
 			children = (
 				4EA9C92A2161A5D600B2ADEB /* Fit Me.app */,
 				4E435AA821645169005F4888 /* FitmeKit.framework */,
+				442662CE228B9C570051D91F /* FitmeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,10 +326,6 @@
 			children = (
 				4E0F19CE216907F0008EBD45 /* Screens */,
 				4EECF34921684F4700113DD5 /* Suporting Files */,
-				4E435AB821645D62005F4888 /* Models */,
-				4E435AB5216451C8005F4888 /* Store */,
-				4EA9C9542161A67600B2ADEB /* Definitions */,
-				4EECF342216847EB00113DD5 /* Extensions */,
 				4EECF33E216846B500113DD5 /* Views */,
 				4EA9C92D2161A5D600B2ADEB /* AppDelegate.swift */,
 				4EAAF8A321741AD100AC4C87 /* AppFlowController.swift */,
@@ -394,6 +423,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		442662CD228B9C570051D91F /* FitmeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 442662D5228B9C570051D91F /* Build configuration list for PBXNativeTarget "FitmeTests" */;
+			buildPhases = (
+				442662CA228B9C570051D91F /* Sources */,
+				442662CB228B9C570051D91F /* Frameworks */,
+				442662CC228B9C570051D91F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				442662D4228B9C570051D91F /* PBXTargetDependency */,
+			);
+			name = FitmeTests;
+			productName = FitmeTests;
+			productReference = 442662CE228B9C570051D91F /* FitmeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4E435AA721645169005F4888 /* FitmeKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E435AB121645169005F4888 /* Build configuration list for PBXNativeTarget "FitmeKit" */;
@@ -437,10 +484,14 @@
 		4EA9C9222161A5D600B2ADEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Douglas Taquary";
 				TargetAttributes = {
+					442662CD228B9C570051D91F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4EA9C9292161A5D600B2ADEB;
+					};
 					4E435AA721645169005F4888 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
@@ -466,11 +517,19 @@
 			targets = (
 				4EA9C9292161A5D600B2ADEB /* Fit Me */,
 				4E435AA721645169005F4888 /* FitmeKit */,
+				442662CD228B9C570051D91F /* FitmeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		442662CC228B9C570051D91F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E435AA621645169005F4888 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,6 +552,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		442662CA228B9C570051D91F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442662D1228B9C570051D91F /* FitmeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E435AA421645169005F4888 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,6 +632,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		442662D4228B9C570051D91F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EA9C9292161A5D600B2ADEB /* Fit Me */;
+			targetProxy = 442662D3228B9C570051D91F /* PBXContainerItemProxy */;
+		};
 		4E435AAE21645169005F4888 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4E435AA721645169005F4888 /* FitmeKit */;
@@ -592,6 +664,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		442662D6228B9C570051D91F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitmeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.douglast.FitmeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fit Me.app/Fit Me";
+			};
+			name = Debug;
+		};
+		442662D7228B9C570051D91F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FitmeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.douglast.FitmeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fit Me.app/Fit Me";
+			};
+			name = Release;
+		};
 		4E435AB221645169005F4888 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,6 +926,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		442662D5228B9C570051D91F /* Build configuration list for PBXNativeTarget "FitmeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				442662D6228B9C570051D91F /* Debug */,
+				442662D7228B9C570051D91F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4E435AB121645169005F4888 /* Build configuration list for PBXNativeTarget "FitmeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -4,6 +4,7 @@ osx_image: xcode10.2
 branches:
   only:
    - master
+
 cache:
 - bundler
 
@@ -12,6 +13,8 @@ before_install:
 - bundle install
 
 script:
+
+- bundle exec fastlane push
 - bundle exec danger
 
 after_success:

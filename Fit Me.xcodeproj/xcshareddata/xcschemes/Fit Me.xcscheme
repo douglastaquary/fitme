@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4EA9C9292161A5D600B2ADEB"
+            BuildableName = "Fit Me.app"
+            BlueprintName = "Fit Me"
+            ReferencedContainer = "container:Fit Me.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "442662CD228B9C570051D91F"
+               BuildableName = "FitmeTests.xctest"
+               BlueprintName = "FitmeTests"
+               ReferencedContainer = "container:Fit Me.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
