@@ -24,7 +24,7 @@ warn("MR is classed as Work in Progress") if github.mr_title.include? "[WIP]"
 warn("Big MR") if git.lines_of_code > 500
 
 # Ensure a clean commits history
-if git.commits.any? { |c| c.message =~ /^Merge branch '#{gitlab.branch_for_base}'/ }
+if git.commits.any? { |c| c.message =~ /^Merge branch '#{github.branch_for_base}'/ }
   fail "Please rebase to get rid of the merge commits in this PR"
 end
 
