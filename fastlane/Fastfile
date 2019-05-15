@@ -1,0 +1,27 @@
+fastlane_version "2.110.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+
+  end
+
+  desc "Runs all the tests"
+  lane :push do
+    scan(
+    project: "Fit Me.xcodeproj",
+    scheme: "Fit Me",
+    clean: true,
+    code_coverage: true,
+    skip_build: true
+  )
+
+  xcov(
+    project: "Fit Me.xcodeproj",
+    scheme: "Fit Me"
+  )
+
+  danger
+  end
+end
