@@ -12,7 +12,7 @@ if github.mr_title.include?("[WIP]") || github.mr_title.include?("WIP:")
 end
 
 def filterFiles(files)
-  return files.select { |f| f.end_with? ".swift" }
+  return files.select  { |f| f.end_with? ".h", ".m", ".swift", ".mm" }
 end
 
 message "Make sure to test your changes before moving your ticket to Code review."
@@ -35,6 +35,8 @@ warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 if git.modified_files.empty? && git.added_files.empty? && git.deleted_files.empty?
   fail "This MR has no changes at all, this is likely an issue during development."
 end
+
+touched_paths = filterFiles(git.added_files | git.modified_files)
 
 touched_paths.each do |p|
   next unless File.exist?(p)
