@@ -54,6 +54,6 @@ end
 
 xcov.report(
    scheme: 'Fit Me',
-   workspace: 'Fit Me.xcodeproj',
-   minimum_coverage_percentage: 10
+   project: 'Fit Me.xcodeproj',
+   minimum_coverage_percentage: 3.0
 )
