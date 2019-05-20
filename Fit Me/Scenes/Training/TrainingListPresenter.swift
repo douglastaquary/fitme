@@ -15,7 +15,7 @@ public protocol TrainingListPresenterProtocol {
     
     func closeLoadingView()
     func presentLoadingView()
-    func presentTrainingList(trainingList: [Training])
+    func presentTrainingList(trainingList: [TrainingViewModel])
     func presentError(error: String)
     
 }
@@ -30,6 +30,9 @@ public class TrainingListPresenter: TrainingListPresenterProtocol {
         self.controller = controller
     }
     
+    
+    // MARK: - Public
+    
     public func closeLoadingView() {
         controller?.hideLoading()
     }
@@ -42,28 +45,9 @@ public class TrainingListPresenter: TrainingListPresenterProtocol {
         assertionFailure("Error = \(error)")
     }
     
-    public func presentTrainingList(trainingList: [Training]) {
+    public func presentTrainingList(trainingList: [TrainingViewModel]) {
         controller?.displayTrainingList(trainings: trainingList)
     }
-    
-    // MARK: - Public
-    
-//    public func presentInteractBanner(response: Offer, icon: UIImage) {
-//        view?.displayBanner(bannerViewModel: InteractBannerViewModel(response: response, icon: icon))
-//    }
-//
-//    public func closeLoadingView() {
-//        view?.hideLoading()
-//    }
-//
-//    public func presentLoadingView() {
-//        view?.displayLoading()
-//    }
-//
-//    public func presentError(error: String) {
-//        debugPrint(error)
-//        view?.displayBanner(bannerViewModel: InteractBannerViewModel.santanderOnBanner())
-//    }
     
 }
 

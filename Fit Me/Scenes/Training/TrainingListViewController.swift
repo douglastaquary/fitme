@@ -12,7 +12,7 @@ import FitmeKit
 
 
 public protocol TrainingListViewControllerDelegate: class {
-    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, list: [Training])
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, training: Training)
 }
 
 public protocol TrainingListViewControllerProtocol: class {
@@ -22,12 +22,13 @@ public protocol TrainingListViewControllerProtocol: class {
     func displayLoading()
     func hideLoading()
     func loadTrainings()
-    func displayTrainingList(trainings: [Training])
-    //func trainingListViewController(_ controller: TrainingListViewController)
+    func displayTrainingList(trainings: [TrainingViewModel])
 }
 
 
 public class TrainingListViewController: UIViewController {
+    
+    private var configuration: FitmeConfiguration?
     
     public var interactor: TrainingListInteractorProtocol?
     public weak var delegate: TrainingListViewControllerDelegate?
@@ -36,9 +37,9 @@ public class TrainingListViewController: UIViewController {
         static let trainingCellIdentifier = "trainingCell"
     }
     
-    public var viewModels: [Training] = [] {
+    public var viewModels: [TrainingViewModel] = [] {
         didSet {
-            //hideLoadingIndicatorIfNeeded()
+            hideLoadingIndicatorIfNeeded()
             tableView.reloadData()
         }
     }
@@ -56,6 +57,38 @@ public class TrainingListViewController: UIViewController {
         return v
     }()
     
+    convenience init(configuration: FitmeConfiguration? = nil) {
+        self.init()
+        self.configuration = configuration
+    }
+    
+    // MARK: - Loading state
+    
+    private var loadingController: LoadingViewController?
+    
+    func showLoadingIndicatorIfNeeded() {
+        showLoadingIndicator()
+    }
+    
+    func showLoadingIndicator() {
+        let loading = LoadingViewController()
+        loading.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        loading.view.frame = view.bounds
+        view.addSubview(loading.view)
+        addChild(loading)
+        loading.didMove(toParent: self)
+        
+        loading.show()
+        
+        loadingController = loading
+    }
+    
+    func hideLoadingIndicatorIfNeeded() {
+        loadingController?.hide(animated: true, completion: { [weak self] in
+            self?.loadingController = nil
+        })
+    }
+    
     // MARK: - Table View
     public lazy var tableView: UITableView = {
         let v = UITableView()
@@ -71,15 +104,27 @@ public class TrainingListViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        title = NSLocalizedString("Workouts", comment: "Product list welcome title")
+        title = NSLocalizedString("Treinos", comment: "Product list welcome title")
         
         installTableView()
         installCustomBackButton()
+        
+        setup()
+        
+        loadTrainings()
     }
     
     public func setup(configuration: FitmeConfiguration = FitmeConfiguration.defaultConfiguration) {
         let presenter = TrainingListPresenter(controller: self)
         interactor = TrainingListInteractor(presenter: presenter, repository: configuration.repository())
+    }
+    
+    // MARK: - Private
+    
+    private func setupList() {
+        if let config = configuration {
+            self.setup(configuration: config)
+        }
     }
 
 
@@ -101,9 +146,10 @@ public class TrainingListViewController: UIViewController {
     
     // MARK: - Private
     
-    fileprivate func loading(show: Bool) {
+    fileprivate func displayBackgroundViewIfNeeded() {
         tableView.reloadData()
-        if !show {
+        if self.viewModels.isEmpty {
+            hideLoadingIndicatorIfNeeded()
             let backgroundView = WelcomeView()
             tableView.backgroundView = backgroundView
         }
@@ -117,7 +163,7 @@ public class TrainingListViewController: UIViewController {
     
 
     public func installTableView() {
-        tableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: Constants.trainingCellIdentifier)
+        tableView.register(TrainingViewCell.self, forCellReuseIdentifier: Constants.trainingCellIdentifier)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -126,11 +172,12 @@ public class TrainingListViewController: UIViewController {
         tableView.frame = view.bounds
         view.addSubview(tableView)
     }
+
 }
 
 // MARK: - Scrolling support
-var scrollableContentDidStartIntersectingSafeArea: (() -> Void)?
-var scrollableContentDidStopIntersectingSafeArea: (() -> Void)?
+public var scrollableContentDidStartIntersectingSafeArea: (() -> Void)?
+public var scrollableContentDidStopIntersectingSafeArea: (() -> Void)?
 
 private var isScrollableContentIntersectingSafeArea = false {
     didSet {
@@ -159,17 +206,22 @@ extension TrainingListViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.trainingCellIdentifier, for: indexPath) as? ExerciseTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.trainingCellIdentifier, for: indexPath) as? TrainingViewCell else { return UITableViewCell() }
         
         let viewModel = viewModels[indexPath.row]
         
-        //cell.viewModel = viewModel
+        cell.viewModel = viewModel
         
-//        cell.didReceiveTap = { [unowned self] in
-//            self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
-//        }
+        cell.didReceiveTap = { [unowned self] in
+            print("Tap to show training detail")
+            //self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
+        }
 //
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88 //
     }
     
     public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
@@ -188,40 +240,22 @@ extension TrainingListViewController: UITableViewDataSource, UITableViewDelegate
 extension TrainingListViewController: TrainingListViewControllerProtocol {
     
     public func displayLoading() {
-        
+        showLoadingIndicatorIfNeeded()
     }
     
     public func hideLoading() {
+        displayBackgroundViewIfNeeded()
         
     }
     
     public func loadTrainings() {
-        
+        interactor?.fetchTrainigs()
     }
     
-    public func displayTrainingList(trainings: [Training]) {
-        interactor.debugDescription
+    public func displayTrainingList(trainings: [TrainingViewModel]) {
+        self.viewModels = trainings
         //interactor
         //setupAccessibility(viewModel: bannerViewModel)
     }
-    
-    
-//    public func displayLoading() {
-//        loading(show: true)
-//    }
-//
-//    public func hideLoading() {
-//        loading(show: false)
-//    }
-//
-//    public func loadBanner() {
-//        interactor?.fetchInteractBanner()
-//    }
-//
-//    public func displayBanner(bannerViewModel: InteractBannerViewModel) {
-//        setupAccessibility(viewModel: bannerViewModel)
-//        delegate?.bannerView(view: self, willShowBanner: bannerViewModel)
-//        currentBanner = bannerViewModel
-//        imageBanner.image = bannerViewModel.icon
-//    }
+
 }

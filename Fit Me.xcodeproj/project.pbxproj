@@ -16,6 +16,9 @@
 		442662F7229213A10051D91F /* TrainingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662F6229213A10051D91F /* TrainingListPresenter.swift */; };
 		442662F9229220DD0051D91F /* FitmeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662F8229220DD0051D91F /* FitmeConfiguration.swift */; };
 		442662FB229225A90051D91F /* ExercisesGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662FA229225A90051D91F /* ExercisesGroup.swift */; };
+		442662FD22922C9F0051D91F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662FC22922C9F0051D91F /* LoadingViewController.swift */; };
+		442663002292332B0051D91F /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662FF2292332B0051D91F /* TrainingView.swift */; };
+		44266302229233A00051D91F /* TrainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44266301229233A00051D91F /* TrainingViewCell.swift */; };
 		4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1D217C240400C08658 /* UIView+extensions.swift */; };
 		4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */; };
 		4E064F22217C259100C08658 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F21217C259100C08658 /* CategoryViewModel.swift */; };
@@ -116,6 +119,9 @@
 		442662F6229213A10051D91F /* TrainingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListPresenter.swift; sourceTree = "<group>"; };
 		442662F8229220DD0051D91F /* FitmeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeConfiguration.swift; sourceTree = "<group>"; };
 		442662FA229225A90051D91F /* ExercisesGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesGroup.swift; sourceTree = "<group>"; };
+		442662FC22922C9F0051D91F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		442662FF2292332B0051D91F /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		44266301229233A00051D91F /* TrainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewCell.swift; sourceTree = "<group>"; };
 		4E064F1D217C240400C08658 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelItem.swift; sourceTree = "<group>"; };
 		4E064F21217C259100C08658 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
@@ -220,6 +226,23 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		442662FE229232FF0051D91F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				442662FF2292332B0051D91F /* TrainingView.swift */,
+				44266301229233A00051D91F /* TrainingViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4426630322923BB30051D91F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E0F19D8216A7DD1008EBD45 /* TrainingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4E0F19CE216907F0008EBD45 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +267,8 @@
 		4E0F19D4216A7A91008EBD45 /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				4E0F19D8216A7DD1008EBD45 /* TrainingViewModel.swift */,
+				4426630322923BB30051D91F /* ViewModel */,
+				442662FE229232FF0051D91F /* Views */,
 				442662F42292138E0051D91F /* TrainingListInteractor.swift */,
 				442662F6229213A10051D91F /* TrainingListPresenter.swift */,
 				4E0F19CF21690806008EBD45 /* TrainingListViewController.swift */,
@@ -259,6 +283,7 @@
 				4E0F19DE216AF0BC008EBD45 /* Cells */,
 				4E0F19DC216AEFD3008EBD45 /* CreateTrainingViewController.swift */,
 				4E064F21217C259100C08658 /* CategoryViewModel.swift */,
+				442662FC22922C9F0051D91F /* LoadingViewController.swift */,
 			);
 			path = CreateTraining;
 			sourceTree = "<group>";
@@ -620,12 +645,15 @@
 				4EAD4B77218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift in Sources */,
 				4EAAF8A6217436D000AC4C87 /* WelcomeView.swift in Sources */,
 				4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */,
+				442663002292332B0051D91F /* TrainingView.swift in Sources */,
 				4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */,
 				4EECF3482168496C00113DD5 /* Bundle+Fitme.swift in Sources */,
 				4EAAF8942173AEBD00AC4C87 /* TrainingStore.swift in Sources */,
+				442662FD22922C9F0051D91F /* LoadingViewController.swift in Sources */,
 				4EAAF89C2173E68C00AC4C87 /* DayViewModel.swift in Sources */,
 				4E0F19D9216A7DD1008EBD45 /* TrainingViewModel.swift in Sources */,
 				4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */,
+				44266302229233A00051D91F /* TrainingViewCell.swift in Sources */,
 				4EAAF8922173A31F00AC4C87 /* UITableView+Extensions.swift in Sources */,
 				4E064F28217D2C3F00C08658 /* TagView.swift in Sources */,
 				4EECF344216847FD00113DD5 /* UIImage+withColor.swift in Sources */,

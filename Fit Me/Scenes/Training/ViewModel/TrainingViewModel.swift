@@ -17,9 +17,17 @@ public struct TrainingViewModel {
         self.training = training
     }
     
+    public var identifier: String {
+        return training.identifier
+    }
+    
     
     public var title: String {
         return training.title
+    }
+    
+    public var exercisesGroup: [ExercisesGroup] {
+        return training.groups
     }
     
     public var exerciseTitle: String {

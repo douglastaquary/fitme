@@ -13,13 +13,13 @@ public class Training: Model, Codable {
 
     public var identifier: String
     public let title: String
-    public let exerciseGroups: [ExercisesGroup]
+    public let groups: [ExercisesGroup]
 
     
-    public init(identifier: String, title: String, exerciseGroups: [ExercisesGroup]) {
+    public init(identifier: String, title: String, groups: [ExercisesGroup]) {
         self.identifier = identifier
         self.title = title
-        self.exerciseGroups = exerciseGroups
+        self.groups = groups
     }
     
 }

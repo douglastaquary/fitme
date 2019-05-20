@@ -32,13 +32,22 @@ public class TrainingListInteractor: TrainingListInteractorProtocol {
     }
     
     public func fetchTrainigs() {
+        presenter?.presentLoadingView()
         
+        repository?.fetchAll { result in
+            switch result {
+            case .success(let trainings):
+                self.presenter?.presentTrainingList(trainingList: trainings.map(TrainingViewModel.init))
+                self.presenter?.closeLoadingView()
+            case .failure(let error):
+                assertionFailure("Error = \n\(error)")
+                self.presenter?.presentError(error: error.localizedDescription)
+                self.presenter?.closeLoadingView()
+            }
+        }
     }
     
-    public func fetchImageBannerOnCms(urlImage: String?) {
-        
-    }
-    
+
     public func goToTrainingDetail(training: TrainingViewModel) {
         
     }

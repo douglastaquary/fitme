@@ -61,15 +61,8 @@ final class AppFlowController: UIViewController {
     }
     
     private func loadTrainings() {
-        store.fetchAll { result in
-            switch result {
-            case .failure(let error):
-                fatalError("Demo mode should never return an error, but returned error: \(error.localizedDescription)")
-            case .success(let trainings):
-                //self.welcomeViewController.viewModel =
-                print("Chamar a lista \(trainings)")
-            }
-        }
+        trainingListViewController.showLoadingIndicatorIfNeeded()
+
     }
 
     // MARK: - Training listing
@@ -78,6 +71,9 @@ final class AppFlowController: UIViewController {
         trainingListViewController.delegate = self
         
         hideNavigationBarBackground(animated: false)
+        
+        let config = FitmeConfiguration(repository: store)
+        self.trainingListViewController = TrainingListViewController(configuration: config)
         
 //        welcomeViewController.scrollableContentDidStartIntersectingSafeArea = { [weak self] in
 //            self?.showNavigationBarBackground()
@@ -130,8 +126,10 @@ final class AppFlowController: UIViewController {
 }
 
 extension AppFlowController: TrainingListViewControllerDelegate {
-    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, list: [Training]) {
-        addNewTraining()
+    
+    ///FIXME: ao inves de uma lista como parametro recer somente um objeto Treino para detalhar
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, training: Training) {
+       // addNewTraining()
     }
     
     
