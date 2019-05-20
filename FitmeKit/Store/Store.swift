@@ -7,19 +7,12 @@
 //
 
 import Foundation
-
-public enum Result<T> {
-    case success(T)
-    case error(Error)
-}
+import FitmeKit
 
 public protocol Store {
-    associatedtype Model
-    typealias StoreCompletionBlock = (Result<Model>) -> Void
-    typealias StoreCollectionCompletionBlock = (Result<[Model]>) -> Void
     
-    func store(models: [Model], completion: @escaping StoreCollectionCompletionBlock)
-    func fetchAll(completion: @escaping StoreCollectionCompletionBlock)
-    func fetch(with identifier: String, completion: @escaping StoreCompletionBlock)
-    func fetch(from userActivity: NSUserActivity, completion: @escaping StoreCompletionBlock)
+    func store(models: [Training], completion: @escaping (Result<[Training], Error>) -> Void)
+    func fetchAll(completion: @escaping (Result<[Training], Error>) -> Void)
+    func fetch(with identifier: String, completion: @escaping (Result<Training, Error>) -> Void)
+    func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Training, Error>) -> Void)
 }

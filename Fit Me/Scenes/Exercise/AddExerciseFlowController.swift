@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FitmeKit
 
 protocol AddExerciseFlowControllerDelegate: class {
     func addExerciseFlowControllerDidPresentSuccessScreen(_ controller: AddExerciseFlowController)

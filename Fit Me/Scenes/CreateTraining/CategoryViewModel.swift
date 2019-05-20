@@ -56,7 +56,7 @@ class CategoryViewModel: NSObject {
         let dorsal = CategoryViewModelDorsalItem(items: items)
         categories.append(dorsal)
         
-        let peitoral = CategoryViewModelDorsalItem(items: items)
+        let peitoral = CategoryViewModelPeitoralItem(items: items)
         categories.append(peitoral)
         
     }

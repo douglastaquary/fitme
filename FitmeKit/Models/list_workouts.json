@@ -1,0 +1,74 @@
+[
+    {
+    "identifier":"2FBF0A98-32BB-439E-AED0-41A9CF67E41B",
+    "title": "Treino A",
+    "exerciseGroups": [
+        {
+            "name": "Abdômen",
+            "tagColor": "#1DA98A",
+            "weekDays": ["2019-04-21T18:25:43.511Z", "2019-04-23T18:25:43.511Z"],
+            "exercises":
+            [
+                {
+                    "name": "Hit - High Intensity Training",
+                    "series": 15,
+                    "delay": 3
+                }
+            ]
+           },
+        {
+            "name": "Bíceps",
+            "tagColor": "#1DA98A",
+            "weekDays": ["2019-04-20T18:25:43.511Z", "2019-04-22T18:25:43.511Z"],
+            "exercises":
+            [
+                {
+                    "name": "Supino Halteres",
+                    "series": 12,
+                    "delay": 3
+                },
+                {
+                    "name": "Bíceps Máquina",
+                    "series": 12,
+                    "delay": 5
+                }
+            ]
+        }]
+    },
+    {
+        "identifier":"2FBF0A98-32BB-439E-AED0-41A9CF67E41B",
+        "title": "Treino B",
+        "exerciseGroups": [
+            {
+                "name": "Abdômen",
+                "tagColor": "#1DA98A",
+                "weekDays": ["2019-04-21T18:25:43.511Z", "2019-04-23T18:25:43.511Z"],
+                "exercises":
+                [
+                    {
+                        "name": "Hit - High Intensity Training",
+                        "series": 15,
+                        "delay": 3
+                    }
+                ]
+            },
+            {
+                "name": "Bíceps",
+                "tagColor": "#1DA98A",
+                "weekDays": ["2019-04-20T18:25:43.511Z", "2019-04-22T18:25:43.511Z"],
+                "exercises":
+                [
+                    {
+                        "name": "Supino Halteres",
+                        "series": 12,
+                        "delay": 3
+                    },
+                    {
+                        "name": "Bíceps Máquina",
+                        "series": 12,
+                        "delay": 5
+                    }
+                ]
+            }]
+    }
+]

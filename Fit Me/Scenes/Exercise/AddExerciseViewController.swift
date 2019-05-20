@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import  FitmeKit
 
 public enum ExerciseStatus {
     case editing
@@ -22,7 +22,6 @@ final class AddExerciseViewController: UIViewController {
     
     weak var delegate: AddExerciseViewControllerDelegate?
     
-    let moc = CoreDataStack()
 //
     var addExerciseView = AddExerciseView(frame: .zero)
     var exercise: Exercise!

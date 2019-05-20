@@ -18,7 +18,7 @@ public extension TrainingViewModel {
     }
     
     var activityUserInfo: [String: String] {
-        return [Keys.identifier: training.identifier ?? "ERROR"]
+        return [Keys.identifier: training.identifier]
     }
     
     var userActivity: NSUserActivity {
@@ -36,7 +36,7 @@ public extension TrainingViewModel {
         
         let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         attributes.thumbnailData = image?.pngData()
-        attributes.contentDescription = attributedDescription.string
+        //attributes.contentDescription = 
         
         activity.contentAttributeSet = attributes
         

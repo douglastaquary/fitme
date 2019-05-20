@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import CoreData
+import FitmeKit
 
 final class AppFlowController: UIViewController {
     
     let store: TrainingStore
-    let moc = CoreDataStack()
     
     init(store: TrainingStore) {
         self.store = store
@@ -24,10 +23,10 @@ final class AppFlowController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var welcomeViewController = TrainingListViewController()
+    private lazy var trainingListViewController = TrainingListViewController()
     
     private lazy var rootNavigationController: UINavigationController = {
-        let controller = UINavigationController(rootViewController: welcomeViewController)
+        let controller = UINavigationController(rootViewController: trainingListViewController)
         
         controller.navigationBar.prefersLargeTitles = true
         
@@ -58,13 +57,13 @@ final class AppFlowController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        //loadTrainings()
+        loadTrainings()
     }
     
     private func loadTrainings() {
         store.fetchAll { result in
             switch result {
-            case .error(let error):
+            case .failure(let error):
                 fatalError("Demo mode should never return an error, but returned error: \(error.localizedDescription)")
             case .success(let trainings):
                 //self.welcomeViewController.viewModel =
@@ -72,11 +71,11 @@ final class AppFlowController: UIViewController {
             }
         }
     }
-    
+
     // MARK: - Training listing
     
     private func installTrainigListSupport() {
-        welcomeViewController.delegate = self
+        trainingListViewController.delegate = self
         
         hideNavigationBarBackground(animated: false)
         
@@ -130,10 +129,12 @@ final class AppFlowController: UIViewController {
 
 }
 
-extension AppFlowController: WelcomeViewControllerDelegate {
-    func welcomeViewController(_ controller: TrainingListViewController) {
+extension AppFlowController: TrainingListViewControllerDelegate {
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, list: [Training]) {
         addNewTraining()
     }
+    
+    
 }
 
 extension AppFlowController: CreateTrainingViewControllerDelegate {
@@ -142,7 +143,7 @@ extension AppFlowController: CreateTrainingViewControllerDelegate {
     }
     
     func didTapRecordButton(to user: User, training: Training) {
-        user.addToUserTrainings(training)
+//        user.addToUserTrainings(training)
     }
     
 }

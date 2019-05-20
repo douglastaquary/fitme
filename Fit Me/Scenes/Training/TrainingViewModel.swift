@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FitmeKit
 
 public struct TrainingViewModel {
     
@@ -18,7 +19,7 @@ public struct TrainingViewModel {
     
     
     public var title: String {
-        return training.name ?? ""
+        return training.title
     }
     
     public var exerciseTitle: String {
@@ -48,10 +49,10 @@ public struct TrainingViewModel {
         ]
     }()
     
-    public var attributedDescription: NSAttributedString {
-        return NSAttributedString(string: training.description, attributes: TrainingViewModel.descriptionAttributes)
-    }
-    
+//    public var attributedDescription: NSAttributedString {
+//        return NSAttributedString(string: training.description, attributes: TrainingViewModel.descriptionAttributes)
+//    }
+//    
     public var attributedButtonTitle: NSAttributedString {
         return NSAttributedString(string: buttonTitle, attributes: TrainingViewModel.buttonTitleAttributes)
     }

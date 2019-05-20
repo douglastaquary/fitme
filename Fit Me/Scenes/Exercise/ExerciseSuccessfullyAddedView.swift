@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FitmeKit
 
 class ExerciseSuccessfullyAddedView: UIView {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FitmeKit
 
 
 enum TrainingViewModelItemType {
@@ -87,7 +88,7 @@ final class CreateTrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupEditModeUI()
+        //setupEditModeUI()
         
         title = NSLocalizedString("Criar Treino", comment: "Record training title")
         
@@ -126,12 +127,12 @@ final class CreateTrainingViewController: UIViewController {
         continueButton.setAttributedTitle(viewModel.attributedButtonTitle, for: .normal)
     }
     
-    private func setupEditModeUI() {
-        let moc = CoreDataStack()
-        let context = moc.persistentContainer.viewContext
-        training = Training(context: context)
-        
-    }
+//    private func setupEditModeUI() {
+//        let moc = CoreDataStack()
+//        let context = moc.persistentContainer.viewContext
+//        training = Training(context: context)
+//        
+//    }
     
     // MARK: - Scrolling support
     var scrollableContentDidStartIntersectingSafeArea: (() -> Void)?
@@ -259,14 +260,14 @@ extension CreateTrainingViewController {
     }
     
     @objc private func didTapButton() {
-        let moc = CoreDataStack()
-        let context = moc.persistentContainer.viewContext
-        let user = User(context: context)
-        
-        training = Training(context: context)
-        
-        guard let newTraining = training else { return }
-        delegate?.didTapRecordButton(to: user, training: newTraining)
+//        let moc = CoreDataStack()
+//        let context = moc.persistentContainer.viewContext
+//        let user = User(context: context)
+//
+//        training = Training(context: context)
+//
+//        guard let newTraining = training else { return }
+//        delegate?.didTapRecordButton(to: user, training: newTraining)
     }
 }
 

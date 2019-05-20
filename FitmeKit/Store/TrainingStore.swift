@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import CoreData
+import FitmeKit
 
 public final class TrainingStore: Store {
     
-    var coreData = CoreDataStack()
-    
+
     public enum FetchError: Error {
         case notFound(String)
         case parse(String)
@@ -36,45 +35,47 @@ public final class TrainingStore: Store {
     private let fakeNetworkingDelay: TimeInterval = 0.5
     
     private lazy var backingStore: [Training] = {
-        let request: NSFetchRequest<Training> = Training.fetchRequest()
-        
-        let moc = coreData.persistentContainer.viewContext
-        do {
-            let allTrainings = try moc.fetch(request)
-            return allTrainings
-        } catch {
-            fatalError("Failed to fetch all trainings")
+        guard let url = Bundle.fitmeKit.url(forResource: "list_workouts", withExtension: "json") else {
+            fatalError("Missing Missing demo.json from FitmeKit resources")
         }
+        
+        do {
+           let data = try Data(contentsOf: url)
+            return try JSONDecoder().decode([Training].self, from: data)
+        } catch {
+             fatalError("Failed to load demo content: \(String(describing: error))")
+        }
+
     }()
     
-    public func fetchAll(completion: @escaping (Result<[Training]>) -> Void) {
+    public func fetchAll(completion: @escaping (Result<[Training], Error>) -> Void) {
         DispatchQueue.main.async {
             completion(.success(self.backingStore))
         }
     }
     
-    public func fetch(with identifier: String, completion: @escaping (Result<Training>) -> Void) {
+    public func fetch(with identifier: String, completion: @escaping (Result<Training, Error>) -> Void) {
         guard let model = backingStore.first(where: { $0.identifier == identifier }) else {
-            completion(.error(FetchError.notFound(identifier)))
+            completion(.failure(FetchError.notFound(identifier)))
             return
         }
         
         completion(.success(model))
     }
     
-    public func store(models: [Training], completion: @escaping (Result<[Training]>) -> Void) {
+    public func store(models: [Training], completion: @escaping (Result<[Training], Error>) -> Void) {
         fatalError("Demo does not support storage")
     }
     
-    public func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Training>) -> Void) {
+    public func fetch(from userActivity: NSUserActivity, completion: @escaping (Result<Training, Error>) -> Void) {
         let key = TrainingViewModel.Keys.identifier
         
-        guard let productIdentifier = userActivity.userInfo?[key] as? String else {
-            completion(.error(FetchError.parse(key)))
+        guard let trainingIdentifier = userActivity.userInfo?[key] as? String else {
+            completion(.failure(FetchError.parse(key)))
             return
         }
         
-        fetch(with: productIdentifier, completion: completion)
+        fetch(with: trainingIdentifier, completion: completion)
     }
     
 }
