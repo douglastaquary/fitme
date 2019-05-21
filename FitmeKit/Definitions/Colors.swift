@@ -20,6 +20,7 @@ private protocol ColorStore {
     static var background: UIColor { get }
     static var primaryText: UIColor { get }
     static var secondaryText: UIColor { get }
+    static var delaySeriesText: UIColor { get }
     static var exerciseTitleText: UIColor { get }
     static var exerciseDescriptionText: UIColor { get }
     static var actionColor: UIColor { get }
@@ -31,11 +32,12 @@ private struct LightTheme: ColorStore {
     static let background: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let primaryText: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     static let secondaryText: UIColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+    static let delaySeriesText: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     static let exerciseTitleText: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
     static let exerciseDescriptionText: UIColor = #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)
     static let actionColor: UIColor =  #colorLiteral(red:0.96, green:0.37, blue:0.16, alpha:1)
     static let success: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
-     static var defaultTag: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
+    static var defaultTag: UIColor = #colorLiteral(red:0.11, green:0.66, blue:0.54, alpha:1)
 }
 
 extension UIColor: ColorStore {
@@ -56,6 +58,10 @@ extension UIColor: ColorStore {
     
     public static var secondaryText: UIColor {
         return colorStore.secondaryText
+    }
+    
+    public static var delaySeriesText: UIColor {
+        return colorStore.delaySeriesText
     }
     
     public static var exerciseTitleText: UIColor {

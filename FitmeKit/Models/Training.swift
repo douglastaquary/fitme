@@ -22,4 +22,23 @@ public class Training: Model, Codable {
         self.groups = groups
     }
     
+    public var allExercises: [Exercise] {
+        let exercises = groups.map { $0.exercises }.flatMap { $0 }
+        return exercises
+    }
+    
+    public var groupNames: [String] {
+        let names = groups.map { (group: ExercisesGroup) -> String in
+                group.name
+            }
+            .compactMap {
+                $0
+            }
+            .flatMap { name -> [String] in
+                return [name]
+            }
+        
+        return names
+    }
+    
 }

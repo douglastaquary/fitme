@@ -10,6 +10,8 @@ import FitmeKit
 
 public class TrainingView: UIView {
     
+    let cardRightShadow = GradientView()
+    
     public var didReceiveTap: (() -> Void)?
     
     public var viewModel: TrainingViewModel? {
@@ -35,7 +37,7 @@ public class TrainingView: UIView {
     private lazy var titleLabel: UILabel = {
         let l = UILabel()
         
-        l.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        l.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         l.textColor = .background
         l.numberOfLines = 1
         l.lineBreakMode = .byTruncatingTail
@@ -50,7 +52,7 @@ public class TrainingView: UIView {
         
         l.numberOfLines = 1
         l.textColor = .background
-        l.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        l.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         l.lineBreakMode = .byWordWrapping
         l.translatesAutoresizingMaskIntoConstraints = false
         l.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -64,19 +66,23 @@ public class TrainingView: UIView {
         
         backgroundColor = UIColor(red:0.11, green:0.66, blue:0.54, alpha:1)
         
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant:  16).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32).isActive = true
-        
-        subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32).isActive = true
-        subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
-        subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24).isActive = true
-        
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant:  16),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -24)
+        ])
+
         layer.cornerRadius = 10
         
-        heightAnchor.constraint(equalToConstant: 88).isActive = true
-        
+        addSubview(cardRightShadow)
+        cardRightShadow.colors = [UIColor.background, UIColor.background.withAlphaComponent(0)]
+        cardRightShadow.startPoint = CGPoint(x: 0.5, y: 2)
+        cardRightShadow.endPoint = CGPoint(x: 0.5, y: 0)
         //setupBackgroundColor()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
@@ -85,24 +91,6 @@ public class TrainingView: UIView {
     
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
         didReceiveTap?()
-    }
-    
-    private func setupBackgroundColor() {
-
-        //let layer = UIView(frame: CGRect(x: 20, y: 285, width: 336, height: 88))
-        //layer.cornerRadius = 10
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: 336, height: 88)
-        gradient.colors = [
-//            UIColor(red:0.11, green:0.66, blue:0.54, alpha:1).cgColor,
-            UIColor(red:0.24, green:0.83, blue:0.75, alpha:1).cgColor
-        ]
-        gradient.locations = [0, 1]
-        gradient.startPoint = CGPoint(x: 0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1, y: 0.5)
-        gradient.cornerRadius = 10
-        layer.addSublayer(gradient)
-        //addSubview(layer)
     }
     
     private func updateUI() {

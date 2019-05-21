@@ -122,16 +122,32 @@ final class AppFlowController: UIViewController {
         
         addExerciseFlow = flow
     }
+    
+    func pushExerciseList(for viewModel: TrainingViewModel) {
+        let exerciseListController = ExerciseListViewController(viewModel: viewModel)
+        
+        exerciseListController.delegate = self
+        
+        rootNavigationController.pushViewController(exerciseListController, animated: true)
+    }
 
 }
 
 extension AppFlowController: TrainingListViewControllerDelegate {
     
-    ///FIXME: ao inves de uma lista como parametro recer somente um objeto Treino para detalhar
-    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, training: Training) {
-       // addNewTraining()
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, didSelectViewModel viewModel: TrainingViewModel) {
+       pushExerciseList(for: viewModel)
     }
     
+    
+}
+
+// MARK: - ProductDetailsViewControllerDelegate
+extension AppFlowController: ExerciseListViewControllerDelegate {
+    
+    func exerciseListViewControllerDelegate(_ controller: ExerciseListViewController) {
+        
+    }
     
 }
 

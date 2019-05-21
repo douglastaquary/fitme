@@ -41,8 +41,17 @@ public struct Metrics {
     public static let exerciseTitleFontSize: CGFloat = 20
     public static let exerciseTitleFontWeight: UIFont.Weight = .medium
     
+    public static let exerciseListTitleFontSize: CGFloat = 16
+    public static let exerciseListTitleFontWeight: UIFont.Weight = .medium
+    
+    public static let exerciseListSubtitleFontSize: CGFloat = 20
+    public static let exerciseListSubtitleFontWeight: UIFont.Weight = .medium
+    
     public static let exerciseDescriptionFontSize: CGFloat = 20
     public static let exerciseDescriptionFontWeight: UIFont.Weight = .medium
+    
+    public static let seriesTimesTextFontSize: CGFloat = 16
+    public static let seriesTimesFontWeight: UIFont.Weight = .medium
     
     public static let fitmeWelcomeIconWidth: CGFloat = 100
     public static let fitmeWelcomeIconHeight: CGFloat = 100
@@ -68,3 +77,20 @@ public struct Metrics {
     public static let tagCircleColorSize: CGFloat = 28
     public static let dayCircleColorSize: CGFloat = 28
 }
+
+//let textLayer = UILabel(frame: CGRect(x: 21, y: 180, width: 80, height: 19))
+//textLayer.lineBreakMode = .byWordWrapping
+//textLayer.numberOfLines = 0
+//textLayer.textColor = UIColor(red:0.11, green:0.66, blue:0.54, alpha:1)
+//textLayer.textAlignment = .center
+//let textContent = "Exercício 1"
+//let textString = NSMutableAttributedString(string: textContent, attributes: [
+//    NSFontAttributeName: UIFont(name: "SFCompactText-Medium", size: 16)!
+//    ])
+//let textRange = NSRange(location: 0, length: textString.length)
+//let paragraphStyle = NSMutableParagraphStyle()
+//paragraphStyle.lineSpacing = 1.19
+//textString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range: textRange)
+//textLayer.attributedText = textString
+//textLayer.sizeToFit()
+//self.view.addSubview(textLayer)

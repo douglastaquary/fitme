@@ -47,8 +47,6 @@ public final class TrainingViewCell: UITableViewCell {
         trainingView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(trainingView)
         
-        contentView.heightAnchor.constraint(equalToConstant: 88).isActive = true
-
         trainingView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Metrics.padding*2).isActive = true
         trainingView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding*2).isActive = true
         trainingView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Metrics.padding).isActive = true

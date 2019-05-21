@@ -19,6 +19,13 @@
 		442662FD22922C9F0051D91F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662FC22922C9F0051D91F /* LoadingViewController.swift */; };
 		442663002292332B0051D91F /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662FF2292332B0051D91F /* TrainingView.swift */; };
 		44266302229233A00051D91F /* TrainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44266301229233A00051D91F /* TrainingViewCell.swift */; };
+		44F0C92822938065002684AF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C92722938065002684AF /* GradientView.swift */; };
+		44F0C92B2293847A002684AF /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C92A2293847A002684AF /* ExerciseListViewController.swift */; };
+		44F0C92D2293848C002684AF /* ExerciseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C92C2293848C002684AF /* ExerciseListPresenter.swift */; };
+		44F0C92F22938499002684AF /* ExerciseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C92E22938499002684AF /* ExerciseListInteractor.swift */; };
+		44F0C932229384E0002684AF /* ExerciseListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C931229384E0002684AF /* ExerciseListViewCell.swift */; };
+		44F0C934229384E8002684AF /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C933229384E8002684AF /* ExerciseListView.swift */; };
+		44F0C93722938E89002684AF /* ExerciseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F0C93622938E89002684AF /* ExerciseListViewModel.swift */; };
 		4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1D217C240400C08658 /* UIView+extensions.swift */; };
 		4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */; };
 		4E064F22217C259100C08658 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E064F21217C259100C08658 /* CategoryViewModel.swift */; };
@@ -122,6 +129,13 @@
 		442662FC22922C9F0051D91F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		442662FF2292332B0051D91F /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		44266301229233A00051D91F /* TrainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewCell.swift; sourceTree = "<group>"; };
+		44F0C92722938065002684AF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		44F0C92A2293847A002684AF /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		44F0C92C2293848C002684AF /* ExerciseListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListPresenter.swift; sourceTree = "<group>"; };
+		44F0C92E22938499002684AF /* ExerciseListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListInteractor.swift; sourceTree = "<group>"; };
+		44F0C931229384E0002684AF /* ExerciseListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewCell.swift; sourceTree = "<group>"; };
+		44F0C933229384E8002684AF /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
+		44F0C93622938E89002684AF /* ExerciseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModel.swift; sourceTree = "<group>"; };
 		4E064F1D217C240400C08658 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		4E064F1F217C249200C08658 /* CategoryViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModelItem.swift; sourceTree = "<group>"; };
 		4E064F21217C259100C08658 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
@@ -243,13 +257,43 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		44F0C92922938451002684AF /* ExerciseList */ = {
+			isa = PBXGroup;
+			children = (
+				44F0C93522938E7A002684AF /* ViewModel */,
+				44F0C930229384C2002684AF /* Views */,
+				44F0C92A2293847A002684AF /* ExerciseListViewController.swift */,
+				44F0C92C2293848C002684AF /* ExerciseListPresenter.swift */,
+				44F0C92E22938499002684AF /* ExerciseListInteractor.swift */,
+			);
+			path = ExerciseList;
+			sourceTree = "<group>";
+		};
+		44F0C930229384C2002684AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44F0C931229384E0002684AF /* ExerciseListViewCell.swift */,
+				44F0C933229384E8002684AF /* ExerciseListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44F0C93522938E7A002684AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44F0C93622938E89002684AF /* ExerciseListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4E0F19CE216907F0008EBD45 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				44F0C92922938451002684AF /* ExerciseList */,
 				442662EB2291C6E80051D91F /* Commons */,
-				4EAD4B71218E9A8A00EFF62D /* Exercise */,
+				4EAD4B71218E9A8A00EFF62D /* AddExercise */,
 				4E0F19D5216A7BAB008EBD45 /* CreateTraining */,
-				4E0F19D4216A7A91008EBD45 /* Training */,
+				4E0F19D4216A7A91008EBD45 /* TrainingList */,
 				4E0F19D1216911FD008EBD45 /* Welcome */,
 			);
 			path = Scenes;
@@ -264,7 +308,7 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
-		4E0F19D4216A7A91008EBD45 /* Training */ = {
+		4E0F19D4216A7A91008EBD45 /* TrainingList */ = {
 			isa = PBXGroup;
 			children = (
 				4426630322923BB30051D91F /* ViewModel */,
@@ -273,7 +317,7 @@
 				442662F6229213A10051D91F /* TrainingListPresenter.swift */,
 				4E0F19CF21690806008EBD45 /* TrainingListViewController.swift */,
 			);
-			path = Training;
+			path = TrainingList;
 			sourceTree = "<group>";
 		};
 		4E0F19D5216A7BAB008EBD45 /* CreateTraining */ = {
@@ -389,7 +433,7 @@
 			path = Tags;
 			sourceTree = "<group>";
 		};
-		4EAD4B71218E9A8A00EFF62D /* Exercise */ = {
+		4EAD4B71218E9A8A00EFF62D /* AddExercise */ = {
 			isa = PBXGroup;
 			children = (
 				4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */,
@@ -397,7 +441,7 @@
 				4EAD4B78218FA3FC00EFF62D /* AddExerciseViewController.swift */,
 				4EAD4B7C218FDB0B00EFF62D /* AddExerciseFlowController.swift */,
 			);
-			path = Exercise;
+			path = AddExercise;
 			sourceTree = "<group>";
 		};
 		4EECF33E216846B500113DD5 /* Views */ = {
@@ -418,6 +462,7 @@
 				4E064F29217D2C7000C08658 /* BaseTemplateView .swift */,
 				4E064F2B217D3F5000C08658 /* DayColorView.xib */,
 				4E064F2D217D428F00C08658 /* DayColorView.swift */,
+				44F0C92722938065002684AF /* GradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -619,10 +664,13 @@
 				4E064F2E217D428F00C08658 /* DayColorView.swift in Sources */,
 				4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */,
 				4EAAF88E2173A0F500AC4C87 /* TrainingNameView.swift in Sources */,
+				44F0C92D2293848C002684AF /* ExerciseListPresenter.swift in Sources */,
+				44F0C934229384E8002684AF /* ExerciseListView.swift in Sources */,
 				4EAAF8992173E45100AC4C87 /* TagViewModel.swift in Sources */,
 				442662ED2291C71E0051D91F /* NibView.swift in Sources */,
 				4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */,
 				4E0F19D021690806008EBD45 /* TrainingListViewController.swift in Sources */,
+				44F0C92822938065002684AF /* GradientView.swift in Sources */,
 				4EAAF88C21739E1200AC4C87 /* Store.swift in Sources */,
 				4EAAF8A22174101F00AC4C87 /* CreateTrainingHeaderSectionView.swift in Sources */,
 				4E064F2A217D2C7000C08658 /* BaseTemplateView .swift in Sources */,
@@ -631,6 +679,7 @@
 				4EECF3452168496000113DD5 /* Metrics.swift in Sources */,
 				442662F9229220DD0051D91F /* FitmeConfiguration.swift in Sources */,
 				4EAAF8A421741AD100AC4C87 /* AppFlowController.swift in Sources */,
+				44F0C932229384E0002684AF /* ExerciseListViewCell.swift in Sources */,
 				4EECF340216846C700113DD5 /* FitmeButton.swift in Sources */,
 				4EAAF8962173B0A500AC4C87 /* TrainingViewModel+NSUserActivity.swift in Sources */,
 				4EECF3462168496700113DD5 /* Colors.swift in Sources */,
@@ -644,6 +693,7 @@
 				442662F7229213A10051D91F /* TrainingListPresenter.swift in Sources */,
 				4EAD4B77218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift in Sources */,
 				4EAAF8A6217436D000AC4C87 /* WelcomeView.swift in Sources */,
+				44F0C92B2293847A002684AF /* ExerciseListViewController.swift in Sources */,
 				4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */,
 				442663002292332B0051D91F /* TrainingView.swift in Sources */,
 				4E064F20217C249200C08658 /* CategoryViewModelItem.swift in Sources */,
@@ -654,6 +704,7 @@
 				4E0F19D9216A7DD1008EBD45 /* TrainingViewModel.swift in Sources */,
 				4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */,
 				44266302229233A00051D91F /* TrainingViewCell.swift in Sources */,
+				44F0C93722938E89002684AF /* ExerciseListViewModel.swift in Sources */,
 				4EAAF8922173A31F00AC4C87 /* UITableView+Extensions.swift in Sources */,
 				4E064F28217D2C3F00C08658 /* TagView.swift in Sources */,
 				4EECF344216847FD00113DD5 /* UIImage+withColor.swift in Sources */,
@@ -663,6 +714,7 @@
 				4E064F24217CCB8100C08658 /* UIViewTextViewModelProtocol.swift in Sources */,
 				4E0F19DD216AEFD3008EBD45 /* CreateTrainingViewController.swift in Sources */,
 				4EAD4B73218E9AE900EFF62D /* AddExerciseView.swift in Sources */,
+				44F0C92F22938499002684AF /* ExerciseListInteractor.swift in Sources */,
 				4EAAF89E21740A7100AC4C87 /* TagListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

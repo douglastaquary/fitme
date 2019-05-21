@@ -9,10 +9,8 @@
 import UIKit
 import FitmeKit
 
-
-
 public protocol TrainingListViewControllerDelegate: class {
-    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, training: Training)
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController, didSelectViewModel viewModel: TrainingViewModel)
 }
 
 public protocol TrainingListViewControllerProtocol: class {
@@ -112,6 +110,8 @@ public class TrainingListViewController: UIViewController {
         setup()
         
         loadTrainings()
+        
+        tableView.reloadData()
     }
     
     public func setup(configuration: FitmeConfiguration = FitmeConfiguration.defaultConfiguration) {
@@ -213,17 +213,13 @@ extension TrainingListViewController: UITableViewDataSource, UITableViewDelegate
         cell.viewModel = viewModel
         
         cell.didReceiveTap = { [unowned self] in
-            print("Tap to show training detail")
-            //self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
+            self.delegate?.trainingListViewControllerDelegate(self, didSelectViewModel: viewModel)
         }
-//
+
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88 //
-    }
-    
+
     public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return false
     }

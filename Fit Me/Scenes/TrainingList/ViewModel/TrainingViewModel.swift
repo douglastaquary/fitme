@@ -30,6 +30,18 @@ public struct TrainingViewModel {
         return training.groups
     }
     
+    public var allExercices: [Exercise] {
+        return training.allExercises
+    }
+    
+    public var exercisesViewModel: [ExerciseListViewModel] {
+        return training.allExercises.map(ExerciseListViewModel.init)
+    }
+    
+    public var groupNames: [String] {
+        return training.groupNames
+    }
+    
     public var exerciseTitle: String {
         return "Bíceps Máquina"
     }
@@ -57,12 +69,17 @@ public struct TrainingViewModel {
         ]
     }()
     
-//    public var attributedDescription: NSAttributedString {
-//        return NSAttributedString(string: training.description, attributes: TrainingViewModel.descriptionAttributes)
-//    }
-//    
+
     public var attributedButtonTitle: NSAttributedString {
         return NSAttributedString(string: buttonTitle, attributes: TrainingViewModel.buttonTitleAttributes)
+    }
+    
+    public var attributedsubtitle: NSAttributedString {
+        return NSAttributedString(string: buttonTitle, attributes: TrainingViewModel.subtitleAttributes)
+    }
+    
+    public var attributedDelaySeries: NSAttributedString {
+        return NSAttributedString(string: buttonTitle, attributes: TrainingViewModel.subtitleAttributes)
     }
     
     private static let buttonTitleAttributes: [NSAttributedString.Key: Any] = {
@@ -71,6 +88,22 @@ public struct TrainingViewModel {
             .font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize, weight: Metrics.buttonTitleFontWeight)
         ]
     }()
+        
+    private static let subtitleAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.actionColor,
+            .font: UIFont.systemFont(ofSize: Metrics.exerciseListSubtitleFontSize, weight: Metrics.exerciseListSubtitleFontWeight)
+        ]
+    }()
+    
+    private static let delaySeriesAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.delaySeriesText,
+            .font: UIFont.systemFont(ofSize: Metrics.seriesTimesTextFontSize, weight: Metrics.seriesTimesFontWeight)
+        ]
+    }()
+    
+
     
 }
 
