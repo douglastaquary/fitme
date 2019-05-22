@@ -56,7 +56,7 @@ public struct Metrics {
     public static let fitmeWelcomeIconWidth: CGFloat = 100
     public static let fitmeWelcomeIconHeight: CGFloat = 100
     
-    public static let buttonTitleFontSize: CGFloat = 22
+    public static let buttonTitleFontSize: CGFloat = 20
     public static let buttonTitleFontWeight: UIFont.Weight = .semibold
     
     public static let buttonHeight: CGFloat = 48

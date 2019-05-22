@@ -19,8 +19,8 @@ enum TrainingViewModelItemType {
 }
 
 protocol CreateTrainingViewControllerDelegate: class {
-    func createTrainingViewController(_ controler: CreateTrainingViewController, training: Training)
-    func didTapRecordButton(to user: User, training: Training)
+    func createTrainingViewController(_ controler: CreateTrainingViewController, viewModel: TrainingViewModel)
+    func didTapRecordButton(to user: User, viewModel: TrainingViewModel)
 }
 
 final class CreateTrainingViewController: UIViewController {
@@ -38,7 +38,7 @@ final class CreateTrainingViewController: UIViewController {
         static let headerIdentifier = " exerciseCell"
     }
     
-    var training: Training? {
+    var training: TrainingViewModel? {
         didSet {
             tableView.reloadData()
         }
@@ -200,7 +200,12 @@ extension CreateTrainingViewController: UITableViewDataSource, UITableViewDelega
             exerciseCell.exerciseView.exerciseLabel.text = item.items[indexPath.row]
             
             exerciseCell.didTapCategory = { [unowned self] in
-                self.delegate?.createTrainingViewController(self, training: self.training!)
+                
+                guard let viewModel = self.training else {
+                    return
+                }
+                
+                self.delegate?.createTrainingViewController(self, viewModel: viewModel)
             }
             
             return exerciseCell

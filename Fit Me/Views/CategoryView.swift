@@ -56,6 +56,7 @@ public class CategoryView: UIView {
         
         i.translatesAutoresizingMaskIntoConstraints =  false
         i.layer.cornerRadius = bounds.size.height/2
+        i.image = UIImage(named: "chevron")
         i.heightAnchor.constraint(equalToConstant: Metrics.arrowImageHeight)
         
         return i

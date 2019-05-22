@@ -17,9 +17,9 @@ public class FitmeButton: UIButton {
         
         setBackgroundImage(UIImage.image(with: UIColor.actionColor),
                            for: .normal)
-        layer.cornerRadius = Metrics.grid / 2
+        layer.cornerRadius = Metrics.grid
         layer.masksToBounds = true
-        let padding = Metrics.grid * 2
+        let padding = Metrics.grid * 4
         contentEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
     }
     
@@ -34,7 +34,7 @@ public class FitmeButton: UIButton {
             let attributedString = NSAttributedString(string: title,
                                                       font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize,
                                                                               weight: Metrics.buttonTitleFontWeight),
-                                                      color: UIColor.actionColor)
+                                                      color: UIColor.background)
             
             setAttributedTitle(attributedString,
                                for: .normal)

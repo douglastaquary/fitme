@@ -133,16 +133,20 @@ final class AppFlowController: UIViewController {
 
 }
 
+// MARK: - TrainingListViewControllerDelegate
 extension AppFlowController: TrainingListViewControllerDelegate {
     
     func trainingListViewControllerDelegate(_ controller: TrainingListViewController, didSelectViewModel viewModel: TrainingViewModel) {
        pushExerciseList(for: viewModel)
     }
     
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController) {
+        addNewTraining()
+    }
     
 }
 
-// MARK: - ProductDetailsViewControllerDelegate
+// MARK: - ExerciseListViewControllerDelegate
 extension AppFlowController: ExerciseListViewControllerDelegate {
     
     func exerciseListViewControllerDelegate(_ controller: ExerciseListViewController) {
@@ -152,13 +156,15 @@ extension AppFlowController: ExerciseListViewControllerDelegate {
 }
 
 extension AppFlowController: CreateTrainingViewControllerDelegate {
-    func createTrainingViewController(_ controler: CreateTrainingViewController, training: Training) {
+    func createTrainingViewController(_ controler: CreateTrainingViewController, viewModel: TrainingViewModel) {
         exerciseEdit()
     }
     
-    func didTapRecordButton(to user: User, training: Training) {
-//        user.addToUserTrainings(training)
+    func didTapRecordButton(to user: User, viewModel: TrainingViewModel) {
+        
     }
+    
+
     
 }
 

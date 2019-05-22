@@ -11,6 +11,8 @@ import FitmeKit
 
 public protocol TrainingListViewControllerDelegate: class {
     func trainingListViewControllerDelegate(_ controller: TrainingListViewController, didSelectViewModel viewModel: TrainingViewModel)
+    func trainingListViewControllerDelegate(_ controller: TrainingListViewController)
+
 }
 
 public protocol TrainingListViewControllerProtocol: class {
@@ -28,6 +30,9 @@ public class TrainingListViewController: UIViewController {
     
     private var configuration: FitmeConfiguration?
     
+    let fitmeButton = FitmeButton()
+    let buttonTopShadow = GradientView()
+    
     public var interactor: TrainingListInteractorProtocol?
     public weak var delegate: TrainingListViewControllerDelegate?
     
@@ -38,22 +43,10 @@ public class TrainingListViewController: UIViewController {
     public var viewModels: [TrainingViewModel] = [] {
         didSet {
             hideLoadingIndicatorIfNeeded()
+            fitmeButton.title = "Novo Treino"
             tableView.reloadData()
         }
     }
-    
-
-    public lazy var contentStack: UIStackView = {
-       let v = UIStackView(arrangedSubviews: [
-        ])
-        
-        v.axis = .vertical
-        v.alignment = .center
-        v.spacing = Metrics.padding
-        v.translatesAutoresizingMaskIntoConstraints = false
-        
-        return v
-    }()
     
     convenience init(configuration: FitmeConfiguration? = nil) {
         self.init()
@@ -105,6 +98,7 @@ public class TrainingListViewController: UIViewController {
         title = NSLocalizedString("Treinos", comment: "Product list welcome title")
         
         installTableView()
+        installFitmeButton()
         installCustomBackButton()
         
         setup()
@@ -119,12 +113,37 @@ public class TrainingListViewController: UIViewController {
         interactor = TrainingListInteractor(presenter: presenter, repository: configuration.repository())
     }
     
-    // MARK: - Private
-    
-    private func setupList() {
-        if let config = configuration {
-            self.setup(configuration: config)
-        }
+    // MARK: - Public
+
+    public func installFitmeButton() {
+        view.addSubview(fitmeButton)
+        
+        let grid: CGFloat = Metrics.grid * 2
+        
+        fitmeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            fitmeButton.heightAnchor.constraint(equalToConstant: 48),
+            fitmeButton.topAnchor.constraint(equalTo: tableView.bottomAnchor),
+            fitmeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: grid),
+            fitmeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -grid),
+            fitmeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -grid * 5)
+        ])
+        
+        fitmeButton.addTarget(self,
+                            action: #selector(addNewTraining),
+                            for: .touchUpInside)
+        
+        view.addSubview(buttonTopShadow)
+        buttonTopShadow.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            buttonTopShadow.heightAnchor.constraint(equalToConstant: grid * 4),
+            buttonTopShadow.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            buttonTopShadow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            buttonTopShadow.bottomAnchor.constraint(equalTo: fitmeButton.topAnchor)
+        ])
+        buttonTopShadow.colors = [UIColor.background, UIColor.background.withAlphaComponent(0)]
+        buttonTopShadow.startPoint = CGPoint(x: 0.5, y: 1)
+        buttonTopShadow.endPoint = CGPoint(x: 0.5, y: 0)
     }
 
 
@@ -156,21 +175,26 @@ public class TrainingListViewController: UIViewController {
     }
 
     
-//    @objc private func addNewTraining() {
-//        delegate?.welcomeViewController(self)
-//    }
-//
-    
+    @objc private func addNewTraining() {
+        delegate?.trainingListViewControllerDelegate(self)
+    }
 
+    
     public func installTableView() {
         tableView.register(TrainingViewCell.self, forCellReuseIdentifier: Constants.trainingCellIdentifier)
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tableView.frame = view.bounds
         view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
+        ])
     }
 
 }
