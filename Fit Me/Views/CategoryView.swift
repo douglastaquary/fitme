@@ -40,7 +40,7 @@ public class CategoryView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
+        //addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
         
         buildUI()
     }
@@ -83,7 +83,7 @@ public class CategoryView: UIView {
     }
     
     func setCollapsed(collapsed: Bool) {
-        //arrowLabel?.rotate(collapsed ? 0.0 : .pi)
+        self.arrowImageView.rotate(collapsed ? 0.0 : .pi)
     }
     
     private func buildUI() {
@@ -101,12 +101,14 @@ public class CategoryView: UIView {
         
         categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.padding*3).isActive = true
         categoryLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.padding).isActive = true
+        
+        //self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(Double.pi / 2))
     }
     
     private func didTapSection() {
         didTapCategory?()
         UIView.animate(withDuration: 0.3, animations: {
-            self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(Double.pi / 2))
+            self.arrowImageView.transform = CGAffineTransform(rotationAngle: .pi)
         })
     }
     
@@ -118,7 +120,7 @@ public class CategoryView: UIView {
     // MARK: - Selection animation
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
+        didTapSection()
         compress()
     }
     
