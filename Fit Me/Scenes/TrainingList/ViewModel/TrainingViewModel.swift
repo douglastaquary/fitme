@@ -50,12 +50,20 @@ public struct TrainingViewModel {
         return UIImage(named: "ic_app")
     }
     
+    public var imageSuccessfull: UIImage? {
+        return UIImage(named: "ic_chevron")
+    }
+    
     public var closeImage: UIImage? {
         return UIImage(named: "close")
     }
     
     public var buttonTitle: String {
         return NSLocalizedString("Adicionar", comment: "Title of button add ")
+    }
+    
+    public var defaultTitle: String {
+        return NSLocalizedString("Lista de treinos", comment: "Title of button training list ")
     }
     
     private static let descriptionAttributes: [NSAttributedString.Key: Any] = {
@@ -69,6 +77,9 @@ public struct TrainingViewModel {
         ]
     }()
     
+    public var attributedButtonDefaultTitle: NSAttributedString {
+        return NSAttributedString(string: defaultTitle, attributes: TrainingViewModel.defaultTitleAttributes)
+    }
 
     public var attributedButtonTitle: NSAttributedString {
         return NSAttributedString(string: buttonTitle, attributes: TrainingViewModel.buttonTitleAttributes)
@@ -103,6 +114,13 @@ public struct TrainingViewModel {
         ]
     }()
     
+    
+    private static let defaultTitleAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.actionColor,
+            .font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize, weight: Metrics.buttonTitleFontWeight)
+        ]
+    }()
 
     
 }

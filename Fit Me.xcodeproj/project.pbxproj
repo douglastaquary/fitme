@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D2FFAD6229A3E950090683F /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */; };
+		1D2FFAD9229AD5C60090683F /* ExerciseSuccessfullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAD8229AD5C60090683F /* ExerciseSuccessfullViewModel.swift */; };
 		442662D1228B9C570051D91F /* FitmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662D0228B9C570051D91F /* FitmeTests.swift */; };
 		442662ED2291C71E0051D91F /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662EC2291C71E0051D91F /* NibView.swift */; };
 		442662EF2291C7670051D91F /* list_workouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 442662EE2291C7670051D91F /* list_workouts.json */; };
@@ -117,6 +118,7 @@
 
 /* Begin PBXFileReference section */
 		1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Padding.swift"; sourceTree = "<group>"; };
+		1D2FFAD8229AD5C60090683F /* ExerciseSuccessfullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSuccessfullViewModel.swift; sourceTree = "<group>"; };
 		442662CE228B9C570051D91F /* FitmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442662D0228B9C570051D91F /* FitmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeTests.swift; sourceTree = "<group>"; };
 		442662D2228B9C570051D91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,6 +225,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2FFAD7229AD5A90090683F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D2FFAD8229AD5C60090683F /* ExerciseSuccessfullViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D2FFADA229AD86F0090683F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */,
+				4EAD4B76218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		442662CF228B9C570051D91F /* FitmeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,8 +458,8 @@
 		4EAD4B71218E9A8A00EFF62D /* AddExercise */ = {
 			isa = PBXGroup;
 			children = (
-				4EAD4B72218E9AE900EFF62D /* AddExerciseView.swift */,
-				4EAD4B76218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift */,
+				1D2FFADA229AD86F0090683F /* Views */,
+				1D2FFAD7229AD5A90090683F /* ViewModel */,
 				4EAD4B78218FA3FC00EFF62D /* AddExerciseViewController.swift */,
 				4EAD4B7C218FDB0B00EFF62D /* AddExerciseFlowController.swift */,
 			);
@@ -670,6 +689,7 @@
 				44F0C92D2293848C002684AF /* ExerciseListPresenter.swift in Sources */,
 				44F0C934229384E8002684AF /* ExerciseListView.swift in Sources */,
 				4EAAF8992173E45100AC4C87 /* TagViewModel.swift in Sources */,
+				1D2FFAD9229AD5C60090683F /* ExerciseSuccessfullViewModel.swift in Sources */,
 				442662ED2291C71E0051D91F /* NibView.swift in Sources */,
 				4E064F1E217C240400C08658 /* UIView+extensions.swift in Sources */,
 				4E0F19D021690806008EBD45 /* TrainingListViewController.swift in Sources */,

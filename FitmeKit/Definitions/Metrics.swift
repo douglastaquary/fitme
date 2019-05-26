@@ -28,8 +28,8 @@ public struct Metrics {
     public static let iconWelcomeSizeWeight: CGFloat = 100
     public static let iconWelcomeSizeHeight: CGFloat = 100
     
-    public static let iconSuccessfullWidth: CGFloat = 100
-    public static let iconSuccessfullHeight: CGFloat = 100
+    public static let iconSuccessfullWidth: CGFloat = 88
+    public static let iconSuccessfullHeight: CGFloat = 88
 
     
     public static let addTrainingSectionTitleFontSize: CGFloat = 16

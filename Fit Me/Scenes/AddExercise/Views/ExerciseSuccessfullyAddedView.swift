@@ -18,13 +18,8 @@ public class ExerciseSuccessfullyAddedView: UIView {
     public var didTapOkButton: (() -> Void)?
     public var didTapCloseButton: (() -> Void)?
 
-    
-    public var viewModel: TrainingViewModel? {
-        didSet {
-            buildUI()
-            updateUI()
-        }
-    }
+    let viewModel = ExerciseSuccessfullViewModel()
+
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,14 +47,19 @@ public class ExerciseSuccessfullyAddedView: UIView {
         return b
     }()
     
-    private lazy var imageView: UIImageView = {
-        let v = UIImageView()
+    private lazy var listAllButton: UIButton = {
+        let b = UIButton()
         
-        v.image = UIImage(named: "ic_chevron")
-        v.translatesAutoresizingMaskIntoConstraints = false
+        b.heightAnchor.constraint(equalToConstant: Metrics.grid*6).isActive = true
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.layer.cornerRadius = Metrics.grid
+        b.setTitleColor(.actionColor, for: .normal)
+        b.clipsToBounds = true
+        //b.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
         
-        return v
+        return b
     }()
+    
     
     private lazy var titleLabel: UILabel = {
         let l = UILabel()
@@ -71,6 +71,14 @@ public class ExerciseSuccessfullyAddedView: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         
         return l
+    }()
+    
+    private lazy var imageView: UIImageView = {
+        let v = UIImageView()
+        
+        v.translatesAutoresizingMaskIntoConstraints = false
+
+        return v
     }()
     
     
@@ -86,35 +94,44 @@ public class ExerciseSuccessfullyAddedView: UIView {
     public func buildUI() {
         backgroundColor = .background
         
+        addSubview(listAllButton)
         addSubview(continuarButton)
-        continuarButton.translatesAutoresizingMaskIntoConstraints = false
-        
         addSubview(closeButton)
+        addSubview(imageView)
+        addSubview(titleLabel)
+        
         closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
         closeButton.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*2).isActive = true
         
-        addSubview(titleLabel)
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5)
         ])
         
-        addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        //imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
             imageView.heightAnchor.constraint(equalToConstant: Metrics.iconSuccessfullWidth),
             imageView.widthAnchor.constraint(equalToConstant: Metrics.iconSuccessfullHeight),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
-            imageView.bottomAnchor.constraint(equalTo: continuarButton.topAnchor, constant: Metrics.grid*2)
+//            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
+            imageView.bottomAnchor.constraint(equalTo: continuarButton.topAnchor, constant: -Metrics.grid*2)
         ])
 
+        continuarButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             continuarButton.heightAnchor.constraint(equalToConstant: 48),
             continuarButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             continuarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
             continuarButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
-            //continuarButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.grid*2)
+            continuarButton.bottomAnchor.constraint(equalTo: listAllButton.topAnchor, constant: -Metrics.grid*2)
+        ])
+
+        NSLayoutConstraint.activate([
+            listAllButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            listAllButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            listAllButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
+            listAllButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.grid*2)
         ])
 
         continuarButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
@@ -123,9 +140,10 @@ public class ExerciseSuccessfullyAddedView: UIView {
     }
     
     private func updateUI() {
-        titleLabel.text = "Exercício Adicionado"//viewModel?.exerciseTitle
-        continuarButton.title = "Continuar" //setAttributedTitle(viewModel?.attributedButtonTitle, for: .normal)
-        imageView.image = viewModel?.image
+        titleLabel.text = viewModel.title
+        continuarButton.title = viewModel.continueButtonTitle
+        imageView.image = viewModel.imageSuccessfull
+        listAllButton.setAttributedTitle(viewModel.attributedButtonDefaultTitle, for: .normal)
     }
     
 }
