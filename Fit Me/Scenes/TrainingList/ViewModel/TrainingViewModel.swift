@@ -51,7 +51,7 @@ public struct TrainingViewModel {
     }
     
     public var imageSuccessfull: UIImage? {
-        return UIImage(named: "ic_chevron")
+        return UIImage(named: "ic_check")
     }
     
     public var closeImage: UIImage? {

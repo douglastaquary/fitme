@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1D2FFAD6229A3E950090683F /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */; };
 		1D2FFAD9229AD5C60090683F /* ExerciseSuccessfullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAD8229AD5C60090683F /* ExerciseSuccessfullViewModel.swift */; };
+		1D2FFADC229AD99A0090683F /*  TrainingCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFADB229AD99A0090683F /*  TrainingCompletedView.swift */; };
+		1D2FFADF229B068E0090683F /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFADE229B068E0090683F /* ModalTransition.swift */; };
+		1D2FFAE2229B1DC50090683F /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAE1229B1DC50090683F /* FinishViewController.swift */; };
 		442662D1228B9C570051D91F /* FitmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662D0228B9C570051D91F /* FitmeTests.swift */; };
 		442662ED2291C71E0051D91F /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662EC2291C71E0051D91F /* NibView.swift */; };
 		442662EF2291C7670051D91F /* list_workouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 442662EE2291C7670051D91F /* list_workouts.json */; };
@@ -119,6 +122,9 @@
 /* Begin PBXFileReference section */
 		1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Padding.swift"; sourceTree = "<group>"; };
 		1D2FFAD8229AD5C60090683F /* ExerciseSuccessfullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSuccessfullViewModel.swift; sourceTree = "<group>"; };
+		1D2FFADB229AD99A0090683F /*  TrainingCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " TrainingCompletedView.swift"; sourceTree = "<group>"; };
+		1D2FFADE229B068E0090683F /* ModalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
+		1D2FFAE1229B1DC50090683F /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		442662CE228B9C570051D91F /* FitmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442662D0228B9C570051D91F /* FitmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeTests.swift; sourceTree = "<group>"; };
 		442662D2228B9C570051D91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -242,6 +248,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1D2FFADD229B06790090683F /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				1D2FFADE229B068E0090683F /* ModalTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		1D2FFAE0229B1DAC0090683F /* Finish */ = {
+			isa = PBXGroup;
+			children = (
+				1D2FFAE1229B1DC50090683F /* FinishViewController.swift */,
+			);
+			path = Finish;
+			sourceTree = "<group>";
+		};
 		442662CF228B9C570051D91F /* FitmeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,10 +333,12 @@
 		4E0F19CE216907F0008EBD45 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D2FFAE0229B1DAC0090683F /* Finish */,
+				1D2FFADD229B06790090683F /* Transitions */,
 				44F0C92922938451002684AF /* ExerciseList */,
 				442662EB2291C6E80051D91F /* Commons */,
 				4EAD4B71218E9A8A00EFF62D /* AddExercise */,
-				4E0F19D5216A7BAB008EBD45 /* CreateTraining */,
+				4E0F19D5216A7BAB008EBD45 /* AddTraining */,
 				4E0F19D4216A7A91008EBD45 /* TrainingList */,
 				4E0F19D1216911FD008EBD45 /* Welcome */,
 			);
@@ -342,7 +366,7 @@
 			path = TrainingList;
 			sourceTree = "<group>";
 		};
-		4E0F19D5216A7BAB008EBD45 /* CreateTraining */ = {
+		4E0F19D5216A7BAB008EBD45 /* AddTraining */ = {
 			isa = PBXGroup;
 			children = (
 				4EAAF89A2173E5C800AC4C87 /* Tags */,
@@ -351,7 +375,7 @@
 				4E064F21217C259100C08658 /* CategoryViewModel.swift */,
 				442662FC22922C9F0051D91F /* LoadingViewController.swift */,
 			);
-			path = CreateTraining;
+			path = AddTraining;
 			sourceTree = "<group>";
 		};
 		4E0F19DE216AF0BC008EBD45 /* Cells */ = {
@@ -485,6 +509,7 @@
 				4E064F2B217D3F5000C08658 /* DayColorView.xib */,
 				4E064F2D217D428F00C08658 /* DayColorView.swift */,
 				44F0C92722938065002684AF /* GradientView.swift */,
+				1D2FFADB229AD99A0090683F /*  TrainingCompletedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -682,11 +707,13 @@
 			files = (
 				442662F52292138E0051D91F /* TrainingListInteractor.swift in Sources */,
 				4E0F19E6216AF454008EBD45 /* ExerciseView.swift in Sources */,
+				1D2FFADF229B068E0090683F /* ModalTransition.swift in Sources */,
 				4E0F19E8216AF471008EBD45 /* ExerciseTableViewCell.swift in Sources */,
 				4E064F2E217D428F00C08658 /* DayColorView.swift in Sources */,
 				4E0F19E0216AF36B008EBD45 /* DayView.swift in Sources */,
 				4EAAF88E2173A0F500AC4C87 /* TrainingNameView.swift in Sources */,
 				44F0C92D2293848C002684AF /* ExerciseListPresenter.swift in Sources */,
+				1D2FFADC229AD99A0090683F /*  TrainingCompletedView.swift in Sources */,
 				44F0C934229384E8002684AF /* ExerciseListView.swift in Sources */,
 				4EAAF8992173E45100AC4C87 /* TagViewModel.swift in Sources */,
 				1D2FFAD9229AD5C60090683F /* ExerciseSuccessfullViewModel.swift in Sources */,
@@ -716,6 +743,7 @@
 				442662F7229213A10051D91F /* TrainingListPresenter.swift in Sources */,
 				4EAD4B77218EAAEF00EFF62D /* ExerciseSuccessfullyAddedView.swift in Sources */,
 				4EAAF8A6217436D000AC4C87 /* WelcomeView.swift in Sources */,
+				1D2FFAE2229B1DC50090683F /* FinishViewController.swift in Sources */,
 				44F0C92B2293847A002684AF /* ExerciseListViewController.swift in Sources */,
 				4E0F19D32169127F008EBD45 /* WelcomeViewModel.swift in Sources */,
 				442663002292332B0051D91F /* TrainingView.swift in Sources */,

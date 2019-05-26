@@ -83,6 +83,8 @@ final class AppFlowController: UIViewController {
 //        }
     }
     
+    let modalTransitionController = ModalTransition()
+    
     private let animationDuration: Double = 0.3
     
     private func hideNavigationBarBackground(animated: Bool = true) {

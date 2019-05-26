@@ -9,9 +9,24 @@
 import UIKit
 import FitmeKit
 
+enum CheckViewState {
+    case uncheck, checked
+}
+
 public class ExerciseListView: UIView {
     
-    public var didReceiveTap: (() -> Void)?
+    public var didUncheck: (() -> Void)?
+    public var didChecked: (() -> Void)?
+    
+    var viewState: CheckViewState = .uncheck {
+        didSet {
+            if viewState == .uncheck {
+                checkImageView.image = UIImage(named: "empty_circle")
+            } else {
+                checkImageView.image = UIImage(named: "ic_check")
+            }
+        }
+    }
     
     public var viewModel: ExerciseListViewModel? {
         didSet {
@@ -74,7 +89,6 @@ public class ExerciseListView: UIView {
         i.translatesAutoresizingMaskIntoConstraints =  false
         i.heightAnchor.constraint(equalToConstant: Metrics.checkImageHeight).isActive = true
         i.widthAnchor.constraint(equalToConstant: Metrics.checkImageHeight).isActive = true
-        i.image = UIImage(named: "empty_circle")
         
         return i
     }()
@@ -113,7 +127,6 @@ public class ExerciseListView: UIView {
             serieTimes.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 24),
             serieTimes.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
 
-            
             lineBottomView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             lineBottomView.trailingAnchor.constraint(equalTo: trailingAnchor, constant:  -16),
             lineBottomView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -124,16 +137,29 @@ public class ExerciseListView: UIView {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
         addGestureRecognizer(tap)
+        
+        updateUI()
     }
     
     @objc private func tapped(_ sender: UITapGestureRecognizer) {
-        didReceiveTap?()
+        if viewState == .checked {
+            didUncheck?()
+            UIView.animate(withDuration: 0.8) {
+               self.viewState = .uncheck
+            }
+        } else {
+            UIView.animate(withDuration: 0.8) {
+                self.viewState = .checked
+            }
+            didChecked?()
+        }
     }
     
     private func updateUI() {
         guard let viewModel = viewModel else { return }
         
         titleLabel.text = "Exercício"
+        checkImageView.image = UIImage(named: "empty_circle")
 //        let arrayGroupName = viewModel.exercisesGroup.map { $0.name }
 //        let arrayOfNames = arrayGroupName.map { String($0) }
 //        let subtitleArray = arrayOfNames.joined(separator: ", ")

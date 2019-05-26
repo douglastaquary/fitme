@@ -97,6 +97,7 @@ public class TrainingListViewController: UIViewController {
         
         title = NSLocalizedString("Treinos", comment: "Product list welcome title")
         
+        
         installTableView()
         installFitmeButton()
         installCustomBackButton()

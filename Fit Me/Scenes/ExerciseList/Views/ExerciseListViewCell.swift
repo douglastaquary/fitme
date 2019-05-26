@@ -21,12 +21,21 @@ public final class ExerciseListViewCell: UITableViewCell {
         }
     }
     
-    public var didReceiveTap: (() -> Void)? {
+    public var didUncheck: (() -> Void)? {
         get {
-            return exerciseListView.didReceiveTap
+            return exerciseListView.didUncheck
         }
         set {
-            exerciseListView.didReceiveTap = newValue
+            exerciseListView.didUncheck = newValue
+        }
+    }
+    
+    public var didChecked: (() -> Void)? {
+        get {
+            return exerciseListView.didChecked
+        }
+        set {
+            exerciseListView.didChecked = newValue
         }
     }
     

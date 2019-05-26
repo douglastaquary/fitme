@@ -10,7 +10,7 @@ import UIKit
 
 protocol DayViewRowProtocol {
     var didTapDay: (() -> Void)? { get }
-    var viewState: CellState { get }
+    var viewState: TagState { get }
     func tapped(_ sender: UITapGestureRecognizer)
     
 }
@@ -26,7 +26,7 @@ public class DayView: UIView {
         }
     }
     
-    var viewState: CellState = .unselected {
+    var viewState: TagState = .unselected {
         didSet {
             if viewState == .unselected {
                 expand { print("didTap") }

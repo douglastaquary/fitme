@@ -108,13 +108,11 @@ public class ExerciseSuccessfullyAddedView: UIView {
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5)
         ])
         
-        //imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
             imageView.heightAnchor.constraint(equalToConstant: Metrics.iconSuccessfullWidth),
             imageView.widthAnchor.constraint(equalToConstant: Metrics.iconSuccessfullHeight),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
             imageView.bottomAnchor.constraint(equalTo: continuarButton.topAnchor, constant: -Metrics.grid*2)
         ])
 

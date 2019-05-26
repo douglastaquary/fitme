@@ -8,16 +8,23 @@
 
 import UIKit
 
+public enum ViewState {
+    case welcome
+    case finish
+}
+
 
 public class WelcomeView: UIView {
     
-    var didTapAddButton: (() -> Void)?
-    
-    public var viewModel: WelcomeViewModel? {
+    public var state: ViewState?  {
         didSet {
-            buildUI()
+            updateUI()
         }
     }
+    
+    var didTapAddButton: (() -> Void)?
+    
+    let viewModel = WelcomeViewModel()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -97,17 +104,17 @@ public class WelcomeView: UIView {
         
         self.backgroundColor = .background
         
-        self.addSubview(imageView)
+        addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.paddingTopImageView*2).isActive = true
         imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        self.addSubview(contentStack)
+        addSubview(contentStack)
         contentStack.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.paddingTopTitleToImage*2).isActive = true
-        contentStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.padding).isActive = true
-        contentStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.padding).isActive = true
-        contentStack.bottomAnchor.constraint(equalTo: welcomeButton.topAnchor, constant: -Metrics.padding)
+        contentStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.padding*4).isActive = true
+        contentStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.padding*4).isActive = true
+        contentStack.bottomAnchor.constraint(equalTo: welcomeButton.topAnchor, constant: -Metrics.padding*2)
     
-        self.addSubview(welcomeButton)
+        addSubview(welcomeButton)
         welcomeButton.heightAnchor.constraint(equalToConstant: Metrics.padding*8)
         welcomeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.padding*3).isActive = true
         welcomeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.padding*3).isActive = true
@@ -118,9 +125,22 @@ public class WelcomeView: UIView {
     
     
     private func updateUI() {
-        imageView.image = viewModel?.image
-        titleLabel.text = viewModel?.title
-        descriptionLabel.attributedText = viewModel?.attributedDescription
-        welcomeButton.setAttributedTitle(viewModel?.attributedButtonTitle, for: .normal)
+        guard let stateView = state else {
+            return
+        }
+        
+        switch stateView {
+        case .welcome:
+            imageView.image = viewModel.appIcon
+            titleLabel.text = viewModel.welcomeTitle
+            descriptionLabel.attributedText = viewModel.attributedWelcomeDescription
+            welcomeButton.setAttributedTitle(viewModel.attributedWelcomeButtonTitle, for: .normal)
+        case .finish:
+            imageView.image = viewModel.trophyIcon
+            titleLabel.text = viewModel.finishTitle
+            descriptionLabel.attributedText = viewModel.attributedFinishDescription
+            welcomeButton.setAttributedTitle(viewModel.attributedFinishButtonTitle, for: .normal)
+        }
     }
+    
 }

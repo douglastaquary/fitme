@@ -13,6 +13,8 @@ public struct Metrics {
     public static let grid: CGFloat = 8
     public static let padding: CGFloat = 8
     
+    public static let animationDuration: TimeInterval = 0.3
+    
     public static let paddingTopImageView: CGFloat = 96 //(padding * 12)
     public static let paddingTopTitleToImage: CGFloat = 32
     
@@ -28,8 +30,8 @@ public struct Metrics {
     public static let iconWelcomeSizeWeight: CGFloat = 100
     public static let iconWelcomeSizeHeight: CGFloat = 100
     
-    public static let iconSuccessfullWidth: CGFloat = 88
-    public static let iconSuccessfullHeight: CGFloat = 88
+    public static let iconSuccessfullWidth: CGFloat = 80
+    public static let iconSuccessfullHeight: CGFloat = 80
 
     
     public static let addTrainingSectionTitleFontSize: CGFloat = 16

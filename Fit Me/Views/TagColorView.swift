@@ -8,18 +8,30 @@
 
 import UIKit
 
-typealias Callback = () -> Void
 
-public enum CellState {
+public enum TagState {
     case selected
     case unselected
 }
 
 public class TagColorView: UIView {
     
-    public var didTapTag: (() -> Void)?
+    public var didTap: (() -> Void)?
+    public var didUntap: (() -> Void)?
     
-    private var circleBackground: UIColor?
+    private var circleBackground: UIColor = .actionColor
+    
+    var viewState: TagState = .unselected {
+        didSet {
+            if viewState == .unselected {
+                circleView.layer.borderColor = circleBackground.withAlphaComponent(0.5).cgColor
+                circleView.layer.borderWidth = 2.5
+            } else {
+                circleView.layer.borderColor = circleBackground.withAlphaComponent(0).cgColor
+                circleView.layer.borderWidth = 0
+            }
+        }
+    }
     
     public var viewModel: TagViewModel? {
         didSet {
@@ -40,16 +52,7 @@ public class TagColorView: UIView {
         buildUI()
     }
     
-    var viewState: CellState = .unselected {
-        didSet {
-            if viewState == .unselected {
-                unselectedTag()
-            } else {
-                selectedTag()
-            }
-        }
-    }
-    
+
     public lazy var circleView: UIView = {
         let v = UIView()
         
@@ -64,7 +67,23 @@ public class TagColorView: UIView {
     }()
     
     
+    @objc private func tapped(_ sender: UITapGestureRecognizer) {
+        if viewState == .selected {
+            didUntap?()
+            UIView.animate(withDuration: 0.8) {
+                self.viewState = .unselected
+            }
+        } else {
+            UIView.animate(withDuration: 0.8) {
+                self.viewState = .selected
+            }
+            didTap?()
+        }
+    }
+    
     private func buildUI() {
+        
+
        // let contentView = self
         
 //        let stackView = UIStackView()
@@ -88,28 +107,16 @@ public class TagColorView: UIView {
 
         circleView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         circleView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        addGestureRecognizer(tap)
     }
     
 
-    @objc private func didTapCell() {
-        if viewState == .selected {
-            viewState = .unselected
-            didTapTag?()
-        } else {
-            viewState = .selected
-            didTapTag?()
-        }
-    }
-    
-    
     private func dayStyle() {
         circleView.alpha = 0
     }
     
-    
-    @objc private func tapped(_ sender: UITapGestureRecognizer) {
-        didTapCell()
-    }
     
     // MARK: - Selection animation
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -137,11 +144,11 @@ public class TagColorView: UIView {
     }
     
     
-    private func unselectedTag() {
-        UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
-            self.layer.transform = CATransform3DIdentity
-            self.circleView.backgroundColor = .background
-        }, completion: nil)
-    }
+//    private func unselectedTag() {
+//        UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: [.allowUserInteraction, .beginFromCurrentState], animations: {
+//            self.layer.transform = CATransform3DIdentity
+//            self.circleView.backgroundColor = .background
+//        }, completion: nil)
+//    }
 }
 

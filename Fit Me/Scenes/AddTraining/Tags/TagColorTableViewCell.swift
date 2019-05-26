@@ -10,7 +10,7 @@ import UIKit
 
 final class TagColorTableViewCell: UITableViewCell {
     
-    public lazy var tagListView = TagView()
+    public lazy var tagListView = TagListView()
     
 //    public var viewModel: TagViewModel? {
 //        get {

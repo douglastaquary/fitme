@@ -96,7 +96,7 @@ public class CategoryView: UIView {
         
         self.heightAnchor.constraint(equalToConstant: Metrics.sectionHeaderHeight).isActive = true
         
-        arrowImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding).isActive = true
+        arrowImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding*2).isActive = true
         arrowImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         
         categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.padding*3).isActive = true

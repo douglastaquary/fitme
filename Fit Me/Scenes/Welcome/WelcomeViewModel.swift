@@ -12,28 +12,30 @@ public struct WelcomeViewModel {
     
     public init() {}
     
-    public var title: String {
+    /// WelcomeView
+    
+    public var welcomeTitle: String {
         return NSLocalizedString("Bem-vindo(a) ao FitMe!", comment: "Title for welcome screen")
     }
     
-    public var description: String {
-        return NSLocalizedString("Após cadastrados seus treinos do FitMe serão exíbidos aqui. Deseja começar?", comment: "description for welcome screen")
+    public var welcomeDescription: String {
+        return NSLocalizedString("Após cadastrados seus treinos do Fitme serão exíbidos aqui. Deseja começar?", comment: "description for welcome screen")
     }
     
-    public var buttonTitle: String {
+    public var welcomeButtonTitle: String {
         return NSLocalizedString("Iniciar", comment: "Title of button welcome screen")
     }
     
-    public var image: UIImage? {
+    public var appIcon: UIImage? {
         return UIImage(named: "ic_app")
     }
     
-    public var attributedDescription: NSAttributedString {
-        return NSAttributedString(string: description, attributes: WelcomeViewModel.descriptionAttributes)
+    public var attributedWelcomeDescription: NSAttributedString {
+        return NSAttributedString(string: welcomeDescription, attributes: WelcomeViewModel.welcomeDescriptionAttributes)
     }
     
-    public var attributedButtonTitle: NSAttributedString {
-        return NSAttributedString(string: buttonTitle, attributes: WelcomeViewModel.buttonTitleAttributes)
+    public var attributedWelcomeButtonTitle: NSAttributedString {
+        return NSAttributedString(string: welcomeTitle, attributes: WelcomeViewModel.welcomeButtonTitleAttributes)
     }
     
     private static let messageParagraphStyle: NSMutableParagraphStyle = {
@@ -45,27 +47,60 @@ public struct WelcomeViewModel {
         return style
     }()
 
-    private static let descriptionAttributes: [NSAttributedString.Key: Any] = {
+    private static let welcomeDescriptionAttributes: [NSAttributedString.Key: Any] = {
         return [
             .foregroundColor: UIColor.secondaryText,
             .font: UIFont.systemFont(ofSize: Metrics.welcomeDescriptionFontSize, weight: Metrics.welcomeDescriptionFontWeight)
         ]
     }()
     
-    private static let buttonTitleAttributes: [NSAttributedString.Key: Any] = {
+    private static let welcomeButtonTitleAttributes: [NSAttributedString.Key: Any] = {
         return [
             .foregroundColor: UIColor.background,
             .font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize, weight: Metrics.buttonTitleFontWeight),
             .paragraphStyle: messageParagraphStyle
         ]
     }()
-//
-//    private static let messageNotificationInfoAttributes: [NSAttributedString.Key: Any] = {
-//        return [
-//            .foregroundColor: UIColor.success,
-//            .font: UIFont.systemFont(ofSize: Metrics.successDescriptionFontSize, weight: Metrics.successDescriptionFontWeight),
-//            .paragraphStyle: messageParagraphStyle
-//        ]
-//    }()
+
+     /// FinishView
+    
+    public var finishTitle: String {
+        return NSLocalizedString("Treino Concluído!", comment: "Title for finish screen")
+    }
+    
+    public var finishDescription: String {
+        return NSLocalizedString("Parabéns você concluiu o seu treino! Acompanhe o seu desempenho mensal através do calendário.", comment: "Descript of finish descript")
+    }
+    
+    public var finishButtonTitle: String {
+        return NSLocalizedString("Ir para calendário", comment: "Title of button welcome screen")
+    }
+    
+    public var trophyIcon: UIImage? {
+        return UIImage(named: "trophy")
+    }
+    
+    public var attributedFinishDescription: NSAttributedString {
+        return NSAttributedString(string: finishDescription, attributes: WelcomeViewModel.finishDescriptionAttributes)
+    }
+    
+    public var attributedFinishButtonTitle: NSAttributedString {
+        return NSAttributedString(string: finishButtonTitle, attributes: WelcomeViewModel.finishButtonTitleAttributes)
+    }
+    
+    private static let finishDescriptionAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.secondaryText,
+            .font: UIFont.systemFont(ofSize: Metrics.welcomeDescriptionFontSize, weight: Metrics.welcomeDescriptionFontWeight)
+        ]
+    }()
+    
+    private static let finishButtonTitleAttributes: [NSAttributedString.Key: Any] = {
+        return [
+            .foregroundColor: UIColor.background,
+            .font: UIFont.systemFont(ofSize: Metrics.buttonTitleFontSize, weight: Metrics.buttonTitleFontWeight),
+            .paragraphStyle: messageParagraphStyle
+        ]
+    }()
     
 }

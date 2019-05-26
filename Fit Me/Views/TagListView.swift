@@ -10,7 +10,7 @@ import UIKit
 
 public class TagListView: UIView {
     
-    public var viewModel: TagViewModelProtocol = TagViewModel() {
+    public var viewModel: TagViewModel = TagViewModel() {
         didSet {
             update()
         }
@@ -26,6 +26,7 @@ public class TagListView: UIView {
         
         buildUI()
     }
+    
     
     private lazy var contentStack: UIStackView = {
         let v = UIStackView()
@@ -50,9 +51,7 @@ public class TagListView: UIView {
         addSubview(scrollView)
         
         backgroundColor = .background
-        
-        heightAnchor.constraint(equalToConstant: Metrics.cellHeight).isActive = true
-        
+                
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
@@ -60,7 +59,7 @@ public class TagListView: UIView {
         
         scrollView.addSubview(contentStack)
         contentStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
-        contentStack.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 1).isActive = true
+        //contentStack.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 1).isActive = true
         
         update()
     }
@@ -70,18 +69,20 @@ public class TagListView: UIView {
 extension TagListView {
     func update(){
         
-        var oldViews = contentStack.arrangedSubviews as? [UIViewTextView]
+        var oldViews = contentStack.arrangedSubviews as? [TagColorView]
         oldViews?.forEach { $0.removeFromSuperview() }
         
-        let newViews = viewModel.tags.map { viewModel -> UIView in
-            let view = oldViews?.popLast() ?? UIViewTextView()
-            view.viewModel = viewModel
+        let newViews = viewModel.tags.map { viewModel -> TagColorView in
+            let view = oldViews?.popLast() ?? TagColorView()
+            view.viewModel = TagViewModel()
             return view
         }
         
         newViews.forEach { contentStack.addArrangedSubview($0) }
         
         contentStack.layoutIfNeeded()
+        
+        scrollView.contentSize = scrollView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
 //        scrollView.contentSize = scrollView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
 //        
 //        scrollView.contentInset = UIEdgeInsets(top: 0, left: Metrics.padding*3, bottom: 0, right: -Metrics.padding)

@@ -28,6 +28,9 @@ public class ExerciseListViewController: UIViewController {
     public var interactor: ExerciseListInteractorProtocol?
     public weak var delegate: ExerciseListViewControllerDelegate?
     
+    let fitmeButton = FitmeButton()
+    let buttonTopShadow = GradientView()
+    
     public struct Constants {
         static let exerciseCellIdentifier = "exerciseListCell"
     }
@@ -73,9 +76,12 @@ public class ExerciseListViewController: UIViewController {
         super.viewDidLoad()
         
         title = NSLocalizedString(viewModel.training.title, comment: "Product list welcome title")
+        fitmeButton.title = NSLocalizedString("Novo Treino", comment: "Exercise list button title")
+
         
         installTableView()
         installCustomBackButton()
+        installFitmeButton()
         
         setup()
         
@@ -127,6 +133,60 @@ public class ExerciseListViewController: UIViewController {
         view.addSubview(tableView)
     }
     
+    private var finishController: FinishViewController?
+
+    
+    @objc private func showFinishController() {
+        let finish = FinishViewController()
+        finish.finishView.state = .finish
+        finish.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        finish.view.frame = view.bounds
+        view.addSubview(finish.view)
+        addChild(finish)
+        finish.didMove(toParent: self)
+        
+        finish.show()
+        
+        title = nil
+        
+        finishController = finish
+    }
+    
+}
+
+extension ExerciseListViewController {
+    // MARK: - Public
+    
+    public func installFitmeButton() {
+        view.addSubview(fitmeButton)
+        
+        let grid: CGFloat = Metrics.grid * 2
+        
+        fitmeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            fitmeButton.heightAnchor.constraint(equalToConstant: 48),
+            fitmeButton.topAnchor.constraint(equalTo: tableView.bottomAnchor),
+            fitmeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: grid),
+            fitmeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -grid),
+            fitmeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -grid * 5)
+        ])
+        
+        fitmeButton.addTarget(self,
+                              action: #selector(showFinishController),
+                              for: .touchUpInside)
+        
+        view.addSubview(buttonTopShadow)
+        buttonTopShadow.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            buttonTopShadow.heightAnchor.constraint(equalToConstant: grid * 4),
+            buttonTopShadow.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            buttonTopShadow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            buttonTopShadow.bottomAnchor.constraint(equalTo: fitmeButton.topAnchor)
+            ])
+        buttonTopShadow.colors = [UIColor.background, UIColor.background.withAlphaComponent(0)]
+        buttonTopShadow.startPoint = CGPoint(x: 0.5, y: 1)
+        buttonTopShadow.endPoint = CGPoint(x: 0.5, y: 0)
+    }
 }
 
 // MARK: - Scrolling support
@@ -142,8 +202,6 @@ private var isScrollableContentIntersectingSafeArea = false {
         }
     }
 }
-
-
 
 
 // MARK: - Table view data source and delegate
@@ -164,8 +222,13 @@ extension ExerciseListViewController: UITableViewDataSource, UITableViewDelegate
         
         cell.viewModel = viewModel
         
-        cell.didReceiveTap = { [unowned self] in
-            print("Tap to show training detail")
+        cell.didChecked = { [unowned self] in
+            print("Exercise finish!")
+            //self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
+        }
+        
+        cell.didUncheck = { [unowned self] in
+            print("Needs finish")
             //self.delegate?.productListViewController(self, didSelectViewModel: viewModel)
         }
         //
