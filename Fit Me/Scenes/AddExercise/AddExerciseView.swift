@@ -13,7 +13,8 @@ public class AddExerciseView: UIView {
     
     public var exercise: Exercise?
     
-    var didTapAddButton: (() -> Void)?
+    public var didTapAddButton: (() -> Void)?
+    public var didTapCloseButton: (() -> Void)?
     
     public var viewModel: TrainingViewModel? {
         didSet {
@@ -36,9 +37,13 @@ public class AddExerciseView: UIView {
     private lazy var closeButton: UIButton = {
         let b = UIButton()
         
-        b.heightAnchor.constraint(equalToConstant: Metrics.grid*2).isActive = true
-        b.widthAnchor.constraint(equalToConstant: Metrics.grid*2).isActive = true
+        b.heightAnchor.constraint(equalToConstant: Metrics.grid*3).isActive = true
+        b.widthAnchor.constraint(equalToConstant: Metrics.grid*3).isActive = true
         b.translatesAutoresizingMaskIntoConstraints = false
+        b.layer.cornerRadius = 12
+        b.setImage(UIImage(named: "ic_close"), for: .normal)
+        b.clipsToBounds = true
+        b.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
         
         return b
     }()
@@ -47,22 +52,14 @@ public class AddExerciseView: UIView {
         let l = UILabel()
         
         l.font = UIFont.systemFont(ofSize: Metrics.addExerciseTitleFontSize, weight: Metrics.addExerciseTitleFontWeight)
-        l.numberOfLines = 0
-        l.translatesAutoresizingMaskIntoConstraints = true
-        l.lineBreakMode = .byWordWrapping
+        l.textColor = .actionColor
+        l.numberOfLines = 1
+        l.lineBreakMode = .byTruncatingTail
+        l.translatesAutoresizingMaskIntoConstraints = false
         
         return l
     }()
     
-    private lazy var adicionarButton: FitmeButton = {
-        let b = FitmeButton()
-        
-        b.heightAnchor.constraint(equalToConstant: Metrics.buttonHeight).isActive = true
-        b.translatesAutoresizingMaskIntoConstraints = false
-        b.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        
-        return b
-    }()
     
     private lazy var serieTextField: UITextField = {
         let t = UITextField()
@@ -70,14 +67,15 @@ public class AddExerciseView: UIView {
         t.layer.borderColor = UIColor.primaryText.cgColor
         t.layer.borderWidth = 1
         t.layer.cornerRadius = 10
-        t.translatesAutoresizingMaskIntoConstraints =  false
+        t.translatesAutoresizingMaskIntoConstraints = false
         t.font = UIFont.systemFont(ofSize: Metrics.exerciseTitleFontSize, weight: Metrics.exerciseTitleFontWeight)
         t.textColor = .primaryText
         t.placeholder = "Séries"
-        //t.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
-        
+        t.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        t.setLeftPaddingPoints(Metrics.grid)
         return t
     }()
+    
     
     private lazy var delayTextField: UITextField = {
         let t = UITextField()
@@ -85,53 +83,88 @@ public class AddExerciseView: UIView {
         t.layer.borderColor = UIColor.primaryText.cgColor
         t.layer.borderWidth = 1
         t.layer.cornerRadius = 10
-        t.translatesAutoresizingMaskIntoConstraints =  false
+        t.translatesAutoresizingMaskIntoConstraints = false
         t.font = UIFont.systemFont(ofSize: Metrics.exerciseTitleFontSize, weight: Metrics.exerciseTitleFontWeight)
         t.textColor = .primaryText
         t.placeholder = "Repetições"
-        //t.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
+        t.setLeftPaddingPoints(Metrics.grid)
+        t.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
         return t
     }()
     
-    @objc public func didTapButton() {
+    let adicionarButton = FitmeButton()
+    
+    @objc private func didTapButton() {
         self.didTapAddButton?()
+    }
+    
+    @objc private func tapCloseButton() {
+        self.didTapCloseButton?()
     }
     
 
     public func buildUI() {
         backgroundColor = .background
-
+        
         addSubview(closeButton)
-        closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
-        closeButton.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*2).isActive = true
-        
-        addSubview(titleLabel)
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5).isActive = true
-        
-        addSubview(serieTextField)
-        serieTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
-        serieTextField.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2).isActive = true
-        serieTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2).isActive = true
+        NSLayoutConstraint.activate([
+            closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*2)
+        ])
 
+        addSubview(titleLabel)
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5)
+        ])
+
+        addSubview(serieTextField)
+        adicionarButton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            serieTextField.heightAnchor.constraint(equalToConstant: 48),
+            serieTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
+            serieTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            serieTextField.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
+            serieTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2)
+        ])
+        
         addSubview(delayTextField)
-        delayTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
-        delayTextField.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2).isActive = true
-        delayTextField.topAnchor.constraint(equalTo: serieTextField.bottomAnchor, constant: Metrics.grid).isActive = true
+        delayTextField.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            delayTextField.heightAnchor.constraint(equalToConstant: 48),
+            delayTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
+            delayTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            delayTextField.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
+            delayTextField.topAnchor.constraint(equalTo: serieTextField.bottomAnchor, constant: Metrics.grid*2)
+        ])
 
         addSubview(adicionarButton)
-        adicionarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
-        adicionarButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2).isActive = true
-        adicionarButton.topAnchor.constraint(equalTo: delayTextField.bottomAnchor, constant: Metrics.grid*2).isActive = true
-        adicionarButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.grid*2).isActive = true
+        adicionarButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            adicionarButton.heightAnchor.constraint(equalToConstant: 48),
+            adicionarButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            adicionarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            adicionarButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
+            adicionarButton.topAnchor.constraint(equalTo: delayTextField.bottomAnchor, constant: Metrics.grid*2)
+        ])
+        
+        adicionarButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
 
         updateUI()
     }
     
     private func updateUI() {
-        titleLabel.text = viewModel?.exerciseTitle
-        adicionarButton.setAttributedTitle(viewModel?.attributedButtonTitle, for: .normal)
+        titleLabel.text = "Bíceps"//viewModel?.exerciseTitle
+        adicionarButton.title = "Adicionar"
+    }
+    
+    @objc func textDidChange(_ textField:UITextField) {
+        
+        print ("TextField did changed")
     }
     
 }

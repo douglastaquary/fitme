@@ -28,6 +28,10 @@ public struct Metrics {
     public static let iconWelcomeSizeWeight: CGFloat = 100
     public static let iconWelcomeSizeHeight: CGFloat = 100
     
+    public static let iconSuccessfullWidth: CGFloat = 100
+    public static let iconSuccessfullHeight: CGFloat = 100
+
+    
     public static let addTrainingSectionTitleFontSize: CGFloat = 16
     public static let addTrainingSectionTitleFontWeight: UIFont.Weight = .regular
     
@@ -57,7 +61,7 @@ public struct Metrics {
     public static let fitmeWelcomeIconHeight: CGFloat = 100
     
     public static let buttonTitleFontSize: CGFloat = 20
-    public static let buttonTitleFontWeight: UIFont.Weight = .semibold
+    public static let buttonTitleFontWeight: UIFont.Weight = .medium
     
     public static let buttonHeight: CGFloat = 48
     
@@ -78,19 +82,3 @@ public struct Metrics {
     public static let dayCircleColorSize: CGFloat = 28
 }
 
-//let textLayer = UILabel(frame: CGRect(x: 21, y: 180, width: 80, height: 19))
-//textLayer.lineBreakMode = .byWordWrapping
-//textLayer.numberOfLines = 0
-//textLayer.textColor = UIColor(red:0.11, green:0.66, blue:0.54, alpha:1)
-//textLayer.textAlignment = .center
-//let textContent = "Exercício 1"
-//let textString = NSMutableAttributedString(string: textContent, attributes: [
-//    NSFontAttributeName: UIFont(name: "SFCompactText-Medium", size: 16)!
-//    ])
-//let textRange = NSRange(location: 0, length: textString.length)
-//let paragraphStyle = NSMutableParagraphStyle()
-//paragraphStyle.lineSpacing = 1.19
-//textString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range: textRange)
-//textLayer.attributedText = textString
-//textLayer.sizeToFit()
-//self.view.addSubview(textLayer)

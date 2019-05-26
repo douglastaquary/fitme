@@ -43,8 +43,6 @@ final class AddExerciseFlowController: NSObject {
     func start() {
         
         let addExerciseController = AddExerciseViewController()
-        
-        //addExerciseController.delegate = self
 
         addExerciseController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         presenter?.present(addExerciseController, animated: true, completion: nil)

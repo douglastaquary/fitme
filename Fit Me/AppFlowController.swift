@@ -156,9 +156,11 @@ extension AppFlowController: ExerciseListViewControllerDelegate {
 }
 
 extension AppFlowController: CreateTrainingViewControllerDelegate {
-    func createTrainingViewController(_ controler: CreateTrainingViewController, viewModel: TrainingViewModel) {
+    func createTrainingViewController(_ controler: CreateTrainingViewController) {
         exerciseEdit()
     }
+    
+
     
     func didTapRecordButton(to user: User, viewModel: TrainingViewModel) {
         

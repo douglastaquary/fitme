@@ -19,7 +19,7 @@ enum TrainingViewModelItemType {
 }
 
 protocol CreateTrainingViewControllerDelegate: class {
-    func createTrainingViewController(_ controler: CreateTrainingViewController, viewModel: TrainingViewModel)
+    func createTrainingViewController(_ controler: CreateTrainingViewController)
     func didTapRecordButton(to user: User, viewModel: TrainingViewModel)
 }
 
@@ -197,15 +197,17 @@ extension CreateTrainingViewController: UITableViewDataSource, UITableViewDelega
             return dayCell
         case .more:
             guard let exerciseCell = tableView.dequeueReusableCell(withIdentifier: Constants.exerciseCellIdentifier, for: indexPath) as? ExerciseTableViewCell else { return UITableViewCell() }
-            exerciseCell.exerciseView.exerciseLabel.text = item.items[indexPath.row]
+            
+            let exerciseView = exerciseCell.exerciseView
+            
+            exerciseView.exerciseLabel.text = item.items[indexPath.row]
             
             exerciseCell.didTapCategory = { [unowned self] in
+//                guard let viewModel = self.training else {
+//                    return
+//                }
                 
-                guard let viewModel = self.training else {
-                    return
-                }
-                
-                self.delegate?.createTrainingViewController(self, viewModel: viewModel)
+                self.delegate?.createTrainingViewController(self)
             }
             
             return exerciseCell
@@ -265,14 +267,9 @@ extension CreateTrainingViewController {
     }
     
     @objc private func didTapButton() {
-//        let moc = CoreDataStack()
-//        let context = moc.persistentContainer.viewContext
-//        let user = User(context: context)
-//
-//        training = Training(context: context)
-//
-//        guard let newTraining = training else { return }
-//        delegate?.didTapRecordButton(to: user, training: newTraining)
+
+        guard let newTraining = training else { return }
+        //delegate?.didTapRecordButton(to: <#T##User#>, viewModel: <#T##TrainingViewModel#>)
     }
 }
 

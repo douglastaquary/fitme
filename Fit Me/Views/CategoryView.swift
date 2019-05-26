@@ -40,7 +40,7 @@ public class CategoryView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
-        //addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapHeader)))
         
         buildUI()
     }
@@ -102,13 +102,13 @@ public class CategoryView: UIView {
         categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.padding*3).isActive = true
         categoryLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.padding).isActive = true
         
-        //self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(Double.pi / 2))
+        self.arrowImageView.transform = self.arrowImageView.transform.rotated(by: CGFloat(Double.pi / 2))
     }
     
     private func didTapSection() {
         didTapCategory?()
         UIView.animate(withDuration: 0.3, animations: {
-            self.arrowImageView.transform = CGAffineTransform(rotationAngle: .pi)
+            self.arrowImageView.transform = CGAffineTransform(rotationAngle: .pi*2)
         })
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2FFAD6229A3E950090683F /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */; };
 		442662D1228B9C570051D91F /* FitmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662D0228B9C570051D91F /* FitmeTests.swift */; };
 		442662ED2291C71E0051D91F /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442662EC2291C71E0051D91F /* NibView.swift */; };
 		442662EF2291C7670051D91F /* list_workouts.json in Resources */ = {isa = PBXBuildFile; fileRef = 442662EE2291C7670051D91F /* list_workouts.json */; };
@@ -115,6 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Padding.swift"; sourceTree = "<group>"; };
 		442662CE228B9C570051D91F /* FitmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442662D0228B9C570051D91F /* FitmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitmeTests.swift; sourceTree = "<group>"; };
 		442662D2228B9C570051D91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		442662EB2291C6E80051D91F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				1D2FFAD4229A3E0F0090683F /* UITextField+Padding.swift */,
 				442662EC2291C71E0051D91F /* NibView.swift */,
 				442662F02291C7880051D91F /* create_workout.json */,
 				442662F8229220DD0051D91F /* FitmeConfiguration.swift */,
@@ -701,6 +704,7 @@
 				4EAAF8942173AEBD00AC4C87 /* TrainingStore.swift in Sources */,
 				442662FD22922C9F0051D91F /* LoadingViewController.swift in Sources */,
 				4EAAF89C2173E68C00AC4C87 /* DayViewModel.swift in Sources */,
+				1D2FFAD6229A3E950090683F /* UITextField+Padding.swift in Sources */,
 				4E0F19D9216A7DD1008EBD45 /* TrainingViewModel.swift in Sources */,
 				4E0F19DB216AED57008EBD45 /* TagColorTableViewCell.swift in Sources */,
 				44266302229233A00051D91F /* TrainingViewCell.swift in Sources */,

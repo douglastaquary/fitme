@@ -17,6 +17,8 @@ public struct ExerciseListViewModel {
         self.exercise = exercise
     }
     
+    public var groupName: String?
+    
     public var name: String {
         return exercise.name
     }

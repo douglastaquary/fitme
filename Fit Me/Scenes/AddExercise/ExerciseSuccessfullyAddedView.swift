@@ -9,11 +9,15 @@
 import UIKit
 import FitmeKit
 
-class ExerciseSuccessfullyAddedView: UIView {
+public class ExerciseSuccessfullyAddedView: UIView {
     
     public var exercise: Exercise?
     
-    var didTapOkButton: (() -> Void)?
+    let continuarButton = FitmeButton()
+    
+    public var didTapOkButton: (() -> Void)?
+    public var didTapCloseButton: (() -> Void)?
+
     
     public var viewModel: TrainingViewModel? {
         didSet {
@@ -22,20 +26,28 @@ class ExerciseSuccessfullyAddedView: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        buildUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
+        buildUI()
     }
     
     private lazy var closeButton: UIButton = {
         let b = UIButton()
         
-        b.heightAnchor.constraint(equalToConstant: Metrics.grid*2).isActive = true
-        b.widthAnchor.constraint(equalToConstant: Metrics.grid*2).isActive = true
+        b.heightAnchor.constraint(equalToConstant: Metrics.grid*3).isActive = true
+        b.widthAnchor.constraint(equalToConstant: Metrics.grid*3).isActive = true
         b.translatesAutoresizingMaskIntoConstraints = false
+        b.layer.cornerRadius = 12
+        b.setImage(UIImage(named: "ic_close"), for: .normal)
+        b.clipsToBounds = true
+        b.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
         
         return b
     }()
@@ -43,8 +55,7 @@ class ExerciseSuccessfullyAddedView: UIView {
     private lazy var imageView: UIImageView = {
         let v = UIImageView()
         
-        v.heightAnchor.constraint(equalToConstant: Metrics.iconWelcomeSizeHeight).isActive = true
-        v.widthAnchor.constraint(equalToConstant: Metrics.iconWelcomeSizeHeight).isActive = true
+        v.image = UIImage(named: "ic_chevron")
         v.translatesAutoresizingMaskIntoConstraints = false
         
         return v
@@ -54,55 +65,66 @@ class ExerciseSuccessfullyAddedView: UIView {
         let l = UILabel()
         
         l.font = UIFont.systemFont(ofSize: Metrics.addExerciseTitleFontSize, weight: Metrics.addExerciseTitleFontWeight)
-        l.numberOfLines = 0
-        l.lineBreakMode = .byWordWrapping
+        l.textColor = .exerciseTitleText
+        l.numberOfLines = 1
+        l.lineBreakMode = .byTruncatingTail
+        l.translatesAutoresizingMaskIntoConstraints = false
         
         return l
     }()
     
-    private lazy var okButton: FitmeButton = {
-        let b = FitmeButton()
-        
-        b.heightAnchor.constraint(equalToConstant: Metrics.buttonHeight).isActive = true
-        b.translatesAutoresizingMaskIntoConstraints = false
-        b.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        
-        return b
-    }()
-    
-
     
     @objc public func didTapButton() {
         self.didTapOkButton?()
+    }
+    
+    @objc private func tapCloseButton() {
+        self.didTapCloseButton?()
     }
     
     
     public func buildUI() {
         backgroundColor = .background
         
+        addSubview(continuarButton)
+        continuarButton.translatesAutoresizingMaskIntoConstraints = false
+        
         addSubview(closeButton)
         closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
         closeButton.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*2).isActive = true
         
         addSubview(titleLabel)
-        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5).isActive = true
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.grid*5)
+        ])
         
         addSubview(imageView)
-        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2).isActive = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.heightAnchor.constraint(equalToConstant: Metrics.iconSuccessfullWidth),
+            imageView.widthAnchor.constraint(equalToConstant: Metrics.iconSuccessfullHeight),
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.grid*2),
+            imageView.bottomAnchor.constraint(equalTo: continuarButton.topAnchor, constant: Metrics.grid*2)
+        ])
 
-        addSubview(okButton)
-        okButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2).isActive = true
-        okButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2).isActive = true
-        okButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.grid*2).isActive = true
-        okButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.grid*2).isActive = true
-        
+        NSLayoutConstraint.activate([
+            continuarButton.heightAnchor.constraint(equalToConstant: 48),
+            continuarButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            continuarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.grid*2),
+            continuarButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.grid*2),
+            //continuarButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Metrics.grid*2)
+        ])
+
+        continuarButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+
+         updateUI()
     }
     
     private func updateUI() {
-        titleLabel.text = viewModel?.exerciseTitle
-        okButton.setAttributedTitle(viewModel?.attributedButtonTitle, for: .normal)
+        titleLabel.text = "Exercício Adicionado"//viewModel?.exerciseTitle
+        continuarButton.title = "Continuar" //setAttributedTitle(viewModel?.attributedButtonTitle, for: .normal)
         imageView.image = viewModel?.image
     }
     

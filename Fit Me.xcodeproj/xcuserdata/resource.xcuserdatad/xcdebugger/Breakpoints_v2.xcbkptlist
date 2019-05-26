@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Fit Me/AppFlowController.swift"
-            timestampString = "567878328.680048"
+            filePath = "Fit Me/Scenes/AddExercise/AddExerciseViewController.swift"
+            timestampString = "580536854.873997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "didTapRecordButton(to:training:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "editExercise()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
